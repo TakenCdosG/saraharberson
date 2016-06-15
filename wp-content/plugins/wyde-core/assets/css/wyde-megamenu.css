@@ -1,0 +1,107 @@
+/* Mega Menu */
+.w-megamenu-field{
+	display:none;
+}
+.menu-item-depth-0 .w-megamenu-field{
+	display:block;
+}
+
+/* Menu Icon Picker */
+.dropit {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.dropit .dropit-trigger {
+    position: relative;
+}
+.dropit .dropit-submenu {
+    position: absolute;
+    top: 100%;
+    left: 0; /* dropdown left or right */
+    z-index: 1000;
+    display: none;
+    list-style: none;
+    min-width: 150px;
+    max-width: 500px;
+    max-height: 300px;
+    overflow-y: scroll;
+    padding: 0;
+    margin: 0;
+}
+.dropit .dropit-open .dropit-submenu { display: block; }
+.dropit-arrow{
+    float: right;
+}
+
+.list-icons {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.list-icons li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+}
+.list-icons li ul{
+    display: none;
+}
+.list-icons a{
+    display: block;
+    text-decoration: none;
+}
+.list-icons .dropit-trigger > a{
+    height: 30px;
+    line-height: 30px;
+    padding: 2px 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.07);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.07);
+    color: #333;
+   
+    -webkit-transition: .05s border-color ease-in-out;
+    transition: .05s border-color ease-in-out;
+}
+.list-icons .dropit-trigger > a:hover,
+.list-icons .dropit-trigger.dropit-open > a{
+    border-color: #5b9dd9;
+    -webkit-box-shadow: 0 0 2px rgba(30,140,190,.8);
+    box-shadow: 0 0 2px rgba(30,140,190,.8);
+    background: #fff;
+}
+.list-icons .dropit-trigger > a i{
+    font-size: 26px;
+    line-height: 30px;
+}
+.list-icons .dropit-submenu{
+    background: #fff;
+    border-color: #5b9dd9;
+    -webkit-box-shadow: 0 0 2px rgba(30,140,190,.8);
+    box-shadow: 0 0 2px rgba(30,140,190,.8);
+
+}
+.list-icons ul > li{
+    display: inline-block;
+    float: left;
+}
+.list-icons .dropit-submenu a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 5px;
+    text-align: center;
+    background: #fff;
+
+}
+.list-icons a i{
+    font-size: 30px;
+    line-height: 40px;
+}
+.list-icons .dropit-submenu a:hover {
+    background: #00aef0;
+    color: #fff;
+}
