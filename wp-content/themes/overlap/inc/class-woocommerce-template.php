@@ -10,10 +10,11 @@ if( ! class_exists( 'Overlap_WooCommerce_Template' ) ) {
 
     	function __construct() {
 
+            // Breadcrumb
             add_filter( 'woocommerce_show_page_title', array( $this, 'shop_title'), 10 );
-
             add_filter( 'woocommerce_breadcrumb_home_url', array( $this, 'shop_page_url') );
             
+            // Page Container
             remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
             add_action( 'woocommerce_before_main_content', array( $this, 'shop_breadcrumb'), 20 );
 
@@ -25,22 +26,36 @@ if( ! class_exists( 'Overlap_WooCommerce_Template' ) ) {
     		add_action( 'woocommerce_before_main_content', array( $this, 'before_container' ), 10 );
     		add_action( 'woocommerce_after_main_content', array( $this, 'after_container' ), 10 );
 
-            // Before shop loop    
+            remove_action( 'woocommerce_sidebar' , 'woocommerce_get_sidebar', 10 );
+            add_action( 'woocommerce_sidebar', array($this, 'add_sidebar'), 10);
+
+            add_filter( 'post_class', array($this, 'get_product_class'), 100 );
+
+            // Before shop loop            
             remove_action( 'woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10 );
             remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10 );
-            add_action( 'woocommerce_before_shop_loop_item_title', array( $this, 'before_shop_loop_item_title' ), 1 );
-            add_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );
-            add_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_add_to_cart', 50 );
+            remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 10 );
 
+            add_action( 'woocommerce_before_shop_loop_item', array( $this, 'before_shop_loop_item' ), 0 );
+            add_action( 'woocommerce_before_shop_loop_item', array( $this, 'product_thumbnail_wrapper_start' ), 0 );
+            add_action( 'woocommerce_before_shop_loop_item', array( $this, 'product_thumbnail' ) );            
+            add_action( 'woocommerce_before_shop_loop_item', array( $this, 'product_stock_status'), 10 );            
+            add_action( 'woocommerce_before_shop_loop_item', 'woocommerce_template_loop_rating', 50 ); 
+            add_action( 'woocommerce_before_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 50 ); 
+
+            add_action( 'woocommerce_before_shop_loop_item', array( $this, 'product_thumbnail_wrapper_end' ), 9999 );
+
+            add_action( 'woocommerce_before_shop_loop_item_title', array($this, 'product_title_wrapper_start'), 9999 );
+            
+           
             // After shop loop
             remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );
             remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5 );
-            remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
+            remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );            
+            add_action( 'woocommerce_after_shop_loop_item_title', array($this, 'product_title_wrapper_end'), 9999 );
+            add_action( 'woocommerce_after_shop_loop_item', array($this, 'after_shop_loop_item'), 9999 );
            
             
-
-            remove_action( 'woocommerce_sidebar' , 'woocommerce_get_sidebar', 10 );
-            add_action( 'woocommerce_sidebar', array($this, 'add_sidebar'), 10);
 
             remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
             add_action( 'woocommerce_after_single_product_summary', array($this, 'upsell_display'), 15 );
@@ -54,19 +69,25 @@ if( ! class_exists( 'Overlap_WooCommerce_Template' ) ) {
 
             add_filter( 'woocommerce_output_related_products_args', array($this, 'output_related_products_args') );
 
-            add_filter( 'woocommerce_thankyou_order_received_text', array($this, 'order_received_text'));
+            add_filter( 'woocommerce_thankyou_order_received_text', array($this, 'order_received_text') );
 
             remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10 );
 
-            add_action( 'woocommerce_before_shop_loop_item_title', array($this, 'product_stock_status'), 10 );
+            add_filter( 'woocommerce_product_description_heading', array($this, 'product_description_heading'), 9999 );
+
+            remove_action( 'woocommerce_review_before_comment_meta', 'woocommerce_review_display_rating', 10 );
+            add_action( 'woocommerce_review_before_comment_meta', 'woocommerce_review_display_rating', 10 );
         
         }        
 
         public function product_stock_status(){
             global $product;
+            echo '<div class="w-product-status">';
+            woocommerce_show_product_loop_sale_flash();
             if ( !$product->is_in_stock() ) {
-                echo '<div class="w-outofstock"><span>' . esc_html__( 'Out of stock', 'overlap' ) . '</span></div>';
+                echo '<div class="w-outofstock"><span>' . esc_html__( 'Out of stock', 'gogreen' ) . '</span></div>';
             } 
+            echo '</div>';
         }
 
         // Change number or products per page
@@ -156,7 +177,39 @@ if( ! class_exists( 'Overlap_WooCommerce_Template' ) ) {
             
         }
 
-        function woocommerce_get_product_thumbnail( $size = 'shop_catalog' ) {
+        function get_product_class( $classes ) {   
+
+            global $woocommerce_loop;
+
+            if( is_single() && !isset( $woocommerce_loop['name'] ) ){
+                return $classes;
+            }
+
+            if( get_post_type( get_the_ID() ) == 'product' && $woocommerce_loop && isset( $woocommerce_loop['columns'] ) ){                
+
+                $columns = intval( $woocommerce_loop['columns'] );
+
+                // Extra post classes
+                $classes[] = 'w-item';
+                if( $columns == 5 ){
+                    $classes[] = 'five-cols';
+                }else{
+                    $classes[] = 'col-'.  absint( floor(12/ $columns ) ); 
+                }    
+            }
+     
+            return $classes;
+        }
+
+        function before_shop_loop_item(){
+            echo '<figure>';
+        }
+
+        function product_thumbnail_wrapper_start(){
+            echo '<div class="image-wrapper">';
+        }
+
+        function product_thumbnail( $size = 'shop_catalog' ) {
             global $product;
 
             $attrs = array();
@@ -184,11 +237,23 @@ if( ! class_exists( 'Overlap_WooCommerce_Template' ) ) {
                 </a>
             </div>
             <?php
-	    }
-
-        function before_shop_loop_item_title(){
-            $this->woocommerce_get_product_thumbnail();  
         }
+
+        function product_thumbnail_wrapper_end(){
+            echo '</div>';
+        }
+
+        function product_title_wrapper_start(){
+            echo '<figcaption>';
+        }
+
+        function product_title_wrapper_end(){
+            echo '</figcaption>';
+        }
+
+        function after_shop_loop_item(){
+            echo '</figure>';
+        }     
 
         function upsell_display(){
            woocommerce_upsell_display(intval( overlap_get_option('related_product_items') ), intval( overlap_get_option('related_product_columns') ));
@@ -196,6 +261,11 @@ if( ! class_exists( 'Overlap_WooCommerce_Template' ) ) {
 
         function order_received_text($message){
             return '<span class="order-received-text">'.$message.'</span>';
+        }
+
+        function product_description_heading($heading){
+            $heading = '';
+            return $heading;
         }
     }
 
@@ -206,30 +276,164 @@ new Overlap_WooCommerce_Template();
 function overlap_woocommerce_dropdown_menu(){
     global $woocommerce;
 
-    $menu_content= sprintf('<li class="menu-item-shop align-right"><a href="%1$s"><span class="cart-items%2$s">%3$s</span></a><ul class="menu-cart">
-        <li class="menu-cart-total"><span class="total-text">%4$s</span> %5$s</li>
-        <li class="menu-view-cart"><span><a href="%1$s" class="w-link-button w-with-icon"><span class="w-border"></span><span class="w-button-icon"><i class="ol-cart"></i></span><span class="w-button-text">%6$s</span></a></span></li>
-        </ul></li>', 
+    $menu_content = sprintf('<li class="menu-item-cart align-right">
+        <a href="%s">%s</a>
+        <ul class="menu-cart">
+        <li class="menu-item-mini-cart woocommerce">
+            <div class="shopping-cart-content">%s</div>
+            %s            
+        </li>        
+        %s
+        </ul>
+        </li>', 
+
         esc_url( $woocommerce->cart->get_cart_url() ), 
-        ($woocommerce->cart->cart_contents_count > 0 )? '':' empty',
-        number_format($woocommerce->cart->cart_contents_count, 0, '.', ','),
-        esc_html__('Subtotal', 'overlap'),
-        $woocommerce->cart->get_cart_total(),
-        esc_html__('View Cart', 'overlap')
+        overlap_dropdown_cart_items(),
+        overlap_dropdown_cart_contents(),   
+        overlap_dropdown_cart_total(),        
+        overlap_dropdown_account_items()
+
+
     );
 
     return $menu_content;
 }
 
-function overlap_dropdown_add_to_cart_fragment( $fragments ) {
-	$fragments['.menu-item-shop'] = overlap_woocommerce_dropdown_menu();
-	return $fragments;
+function overlap_dropdown_account_items(){
+      
+    $items = array();
+    if( is_user_logged_in() ){
+
+        $items[] = sprintf('<li class="menu-item-account"><div>
+            <a href="%s" class="menu-item-my-account">%s</a>
+            <a href="%s" class="menu-item-logout">%s</a>
+            </div></li>',
+            esc_url( get_permalink( wc_get_page_id( 'myaccount' ) ) ),
+            esc_html__('Account', 'overlap'),
+            esc_url( wp_logout_url( get_permalink() ) ),
+            esc_html__('Sign out', 'overlap')
+        );
+            
+
+    }else{
+        $items[] = sprintf('<li class="menu-item-login"><a href="%s">%s</a></li>',
+            esc_url( wp_login_url( get_permalink() ) ),
+            esc_html__('Sign in', 'overlap')
+        );
+    }
+    
+    $items = apply_filters('overlap_dropdown_account_items', $items);
+
+    $output = implode('', $items);
+
+    return $output;
 }
-add_filter('add_to_cart_fragments', 'overlap_dropdown_add_to_cart_fragment');
+
+function overlap_dropdown_cart_items(){
+    global $woocommerce;
+    return sprintf('<span class="cart-items%s">%s</span>',
+        ($woocommerce->cart->cart_contents_count > 0 )? '':' empty',
+        number_format($woocommerce->cart->cart_contents_count, 0, '.', ',')
+        );
+}
+
+function overlap_dropdown_cart_items_fragment( $fragments ) {
+    $fragments['.cart-items'] = overlap_dropdown_cart_items();
+    return $fragments;
+}
+add_filter('woocommerce_add_to_cart_fragments', 'overlap_dropdown_cart_items_fragment');
+
+function overlap_dropdown_cart_contents(){
+
+    ob_start();
+    ?>
+
+    <ul class="mini-cart-list">
+
+    <?php if ( ! WC()->cart->is_empty() ) : ?>
+
+        <?php
+            foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
+                $_product     = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
+                $product_id   = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
+
+                if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_widget_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
+
+                    $product_name  = apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $cart_item, $cart_item_key );
+                    $thumbnail     = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
+                    $product_price = apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key );
+                    ?>
+                    <li>
+                        <?php
+                        echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
+                            '<a href="%s" class="remove" title="%s" data-product_id="%s" data-product_sku="%s">&times;</a>',
+                            esc_url( WC()->cart->get_remove_url( $cart_item_key ) ),
+                            esc_html__( 'Remove this item', 'overlap' ),
+                            esc_attr( $product_id ),
+                            esc_attr( $_product->get_sku() )
+                        ), $cart_item_key );
+                        ?>
+                        <?php if ( ! $_product->is_visible() ) : ?>
+                            <?php echo str_replace( array( 'http:', 'https:' ), '', $thumbnail ) . '<span>'. $product_name .'</span>'; ?>
+                        <?php else : ?>
+                            <a href="<?php echo esc_url( $_product->get_permalink( $cart_item ) ); ?>" class="product-thumb">
+                                <?php echo str_replace( array( 'http:', 'https:' ), '', $thumbnail ) . '<span>'. $product_name .'</span>'; ?>
+                            </a>
+                        <?php endif; ?>
+                        <?php echo WC()->cart->get_item_data( $cart_item ); ?>
+
+                        <?php echo apply_filters( 'woocommerce_widget_cart_item_quantity', '<span class="quantity">' . sprintf( '%s &times; %s', $cart_item['quantity'], $product_price ) . '</span>', $cart_item, $cart_item_key ); ?>
+                    </li>
+                    <?php
+                }
+            }
+        ?>    
+    <?php else : ?>
+
+        <li class="empty"><?php echo esc_html__( 'Your cart is empty.', 'overlap' ); ?></li>
+
+    <?php endif; ?>
+    </ul>    
+    <?php
+
+    $mini_cart = ob_get_clean();
+    
+    return $mini_cart;
+}
+
+function overlap_dropdown_cart_contents_fragment( $fragments ) {
+    $fragments['.mini-cart-list'] = overlap_dropdown_cart_contents();
+    return $fragments;
+}
+add_filter('woocommerce_add_to_cart_fragments', 'overlap_dropdown_cart_contents_fragment');
+
+function overlap_dropdown_cart_total(){
+    $output = '';
+    if ( ! WC()->cart->is_empty() ) : 
+        $output = sprintf('<p class="subtotal"><strong>%s</strong><span>%s</span></p>
+            <p class="buttons"><a href="%s" class="button wc-viewcart">%s</a><a href="%s" class="button wc-checkout">%s</a></p>', 
+            esc_html__( 'Subtotal', 'overlap' ),
+            WC()->cart->get_cart_subtotal(),
+            esc_url( wc_get_cart_url() ),
+            esc_html__( 'View Cart', 'overlap' ),            
+            esc_url( wc_get_checkout_url() ),
+            esc_html__( 'Checkout', 'overlap' )
+        );
+        
+    endif;
+    return '<div class="cart-total">'.$output.'</div>';
+}
+
+
+function overlap_dropdown_cart_total_fragment( $fragments ) {
+    $fragments['.cart-total'] = overlap_dropdown_cart_total();
+    return $fragments;
+}
+add_filter('woocommerce_add_to_cart_fragments', 'overlap_dropdown_cart_total_fragment');
 
 function overlap_woocommerce_menu(){
     global $woocommerce;
-    $menu_content= sprintf('<li class="menu-item-cart"><a href="%1$s">%2$s<span class="cart-items%3$s">%4$s</span></a></li>', 
+    $menu_content= sprintf('<li class="menu-item-shop"><a href="%1$s">%2$s<span class="cart-items%3$s">%4$s</span></a></li>', 
         esc_url( $woocommerce->cart->get_cart_url() ), 
         esc_html__('My Cart', 'overlap'), 
         $woocommerce->cart->cart_contents_count > 0 ? '':' empty', 
@@ -239,8 +443,7 @@ function overlap_woocommerce_menu(){
 }
 
 function overlap_add_to_cart_fragment( $fragments ) {
-	$fragments['.menu-item-cart'] = overlap_woocommerce_menu();
+	$fragments['.menu-item-shop'] = overlap_woocommerce_menu();
 	return $fragments;
 }
-add_filter('add_to_cart_fragments', 'overlap_add_to_cart_fragment');
-
+add_filter('woocommerce_add_to_cart_fragments', 'overlap_add_to_cart_fragment');

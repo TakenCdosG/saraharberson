@@ -118,7 +118,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 <?php do_action( 'woocommerce_after_cart_table' ); ?>
 
 <div class="cart-collaterals row">
-	<div class="col col-5">
+	<div class="col col-5 cart-coupon">
 		<p class="buttons">
 			<input type="submit" class="button" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" />
 			<a href="<?php echo esc_url( get_permalink( woocommerce_get_page_id( 'shop' ) ) );?>" class="button"><?php echo esc_html__('Continue Shopping', 'woocommerce' );?></a>
@@ -126,13 +126,13 @@ do_action( 'woocommerce_before_cart' ); ?>
 			<?php wp_nonce_field( 'woocommerce-cart' ); ?>
 		</p>
 	<?php if ( WC()->cart->coupons_enabled() ) { ?>
-		<div class="coupon">
+	<div class="coupon">
 
-			<label for="coupon_code"><?php _e( 'Coupon', 'woocommerce' ); ?>:</label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php _e( 'Coupon code', 'woocommerce' ); ?>" /> <input type="submit" class="button" name="apply_coupon" value="<?php _e( 'Apply Coupon', 'woocommerce' ); ?>" />
+		<label for="coupon_code"><?php _e( 'Coupon', 'woocommerce' ); ?>:</label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php _e( 'Coupon code', 'woocommerce' ); ?>" /> <input type="submit" class="button" name="apply_coupon" value="<?php _e( 'Apply Coupon', 'woocommerce' ); ?>" />
 
-			<?php do_action( 'woocommerce_cart_coupon' ); ?>
+		<?php do_action( 'woocommerce_cart_coupon' ); ?>
 
-		</div>
+	</div>
 	<?php } ?>
 
 	</div>

@@ -53,7 +53,21 @@ CMB2
 ===================================
 UPDATE LOG
 ===================================
-Version 1.0.5 - latest update
+Version 1.1 (latest update)
+-Added WooCommerce 2.6.x compatibility
+-Updated Slider Revolution 5.2.5.4
+-Updated Wyde Core
+-Updated Mini Cart in top navigation
+-Updated WooCommerce templates
+-Updated WooCommerce Account page
+-Updated PO file
+-Updated Child Theme
+-Updated Documentation
+-Fixed prettyPhoto https iframe
+-Fixed Flickr Stream
+
+
+Version 1.0.5 – 10-06-2016
 -Updated Visual Composer 4.12
 -Updated Slider Revolution 5.2.5.3
 -Updated Wyde Core
@@ -62,7 +76,7 @@ Version 1.0.5 - latest update
 -Fixed Author box
 
 
-Version 1.0.4 - 29-05-2015
+Version 1.0.4 - 29-05-2016
 -Updated Slider Revolution 5.2.5.2
 -Updated TGM Plugin Activation class 2.6.1
 -Updated Top Menu Logo

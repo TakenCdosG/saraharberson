@@ -106,15 +106,22 @@
     ?>
     <?php if( $hide_filter != 'true' ): ?>
     <ul class="w-filter clear">
-        <li class="active"><a href="#all" title=""><?php echo esc_html__('All', 'overlap'); ?></a></li>
+        <li class="active"><a href="#all" title=""><?php echo __('All', 'overlap'); ?></a></li>
         <?php   
-        $terms = get_terms('portfolio_category');
+        $terms = array();
+        if( isset( $query_args['tax_query'] ) && is_array( $query_args['tax_query'] ) ){
+            foreach( $query_args['tax_query'] as $tax){
+                if( isset( $tax['taxonomy'] ) &&  $tax['taxonomy'] == 'portfolio_category'){                   
+                    $terms = $tax['terms'];
+                }
+            }
+        }
 
-        if ( is_array($terms) )
+        $filters = get_terms('portfolio_category', array('include' => $terms ) );
+        if ( is_array($filters) )
         {   
-            foreach ( $terms as $term ) {
-                $term_link = urldecode($term->slug);
-                echo sprintf('<li><a href="#c-%s" title="">%s</a></li>', esc_attr( $term_link ), esc_html( $term->name ));
+            foreach ( $filters as $filter ) {
+                echo sprintf('<li><a href="#c-%s" title="">%s</a></li>', esc_attr( urldecode($filter->slug) ), esc_html( $filter->name ));
             }
         }
         ?>

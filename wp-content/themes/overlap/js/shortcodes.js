@@ -42,7 +42,7 @@
             }
         });
 
-        $(".w-link-button:not(.w-with-icon)").each(function () {
+        $(".w-link-button").each(function () {
 
             var $el = $(this);            
 

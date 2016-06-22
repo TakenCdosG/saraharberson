@@ -186,10 +186,10 @@ function overlap_load_scripts(){
     wp_enqueue_script('jquery-effects-core');    
 
     // jQuery plugins
-    wp_enqueue_script('overlap-plugins', get_template_directory_uri() . '/js/plugins.js', array('jquery'), $version, true);
+    wp_enqueue_script('overlap-plugins', get_template_directory_uri() . '/js/plugins.js', array('wyde-core'), $version, true);
 
     // Main scripts
-    wp_enqueue_script('overlap-main', get_template_directory_uri() . '/js/main.js', array('jquery'), $version, true);
+    wp_enqueue_script('overlap-main', get_template_directory_uri() . '/js/main.js', array('overlap-plugins'), $version, true);
 
     // Shortcodes scripts
     wp_enqueue_script('overlap-shortcodes', get_template_directory_uri() . '/js/shortcodes.js', array('overlap-main'), $version, true);
@@ -236,7 +236,7 @@ function overlap_load_scripts(){
 
     wp_localize_script('overlap-main', 'wyde_page_settings', $wyde_page_settings);
 
-    wp_enqueue_script('smoothscroll', get_template_directory_uri() .'/js/smoothscroll.js', null, $version, true);   
+    wp_enqueue_script('smoothscroll', get_template_directory_uri() .'/js/smoothscroll.js', array('overlap-main'), $version, true);   
 
 }
 add_action('wp_enqueue_scripts', 'overlap_load_scripts');
@@ -507,7 +507,7 @@ function overlap_register_required_plugins() {
             'slug'                  => 'wyde-core', 
             'source'                => get_template_directory() .'/inc/plugins/wyde-core.zip',
             'required'              => true, 
-            'version'               => '3.1.0', 
+            'version'               => '3.1.2', 
             'force_activation'      => false,
             'force_deactivation'    => false, 
             'external_url'          => '', 
@@ -527,7 +527,7 @@ function overlap_register_required_plugins() {
             'slug'                  => 'revslider', 
             'source'                => get_template_directory() .'/inc/plugins/revslider.zip',
             'required'              => false, 
-            'version'               => '5.2.5.3',
+            'version'               => '5.2.5.4',
             'force_activation'      => false, 
             'force_deactivation'    => false, 
             'external_url'          => '',
@@ -554,7 +554,9 @@ function overlap_register_required_plugins() {
         'dismiss_msg'  => '',                      // If 'dismissable' is false, this message will be output at top of nag.
         'is_automatic' => false,                   // Automatically activate plugins after installation or not.
         'message'      => '',                      // Message to output right before the plugins table.
-               
+        'strings' => array(
+                'page_title'  => __( 'Install Bundled Plugins', 'overlap' )
+        ),
         
     );
 

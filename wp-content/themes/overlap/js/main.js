@@ -319,6 +319,8 @@
 
                 if( !$("body").hasClass("mobile-nav") ){
 
+                    var self = this;
+
                     setTimeout(function () {
                         
                         var winWidth = $(window).width();
@@ -333,7 +335,31 @@
                                 $(this).removeClass("align-right");
                             } 
 
-                        });                        
+                        });
+                        
+
+                        $(".menu-cart .shopping-cart-content").each(function(){
+                            
+                            var $el = $(this);                             
+                            var updateMiniCart = function(){
+                                var maxHeight = $(window).height() - (self.pageTop + self.header.height() + $(".menu-cart .buttons").outerHeight() + 150 );
+                                $el.wydeScroller("refresh", maxHeight);
+                            };
+                                                        
+                            if( $el.find(".w-scroller").length ){ 
+                                updateMiniCart();
+                            }else{
+                                var maxHeight = $(window).height() - (self.pageTop + self.header.height() + $(".menu-cart .buttons").outerHeight() + 150 );                                
+                                $(".menu-cart .shopping-cart-content").wydeScroller( { height: maxHeight } );
+                                $(document.body).on("added_to_cart", function(){
+                                    updateMiniCart();
+                                });
+                            }
+
+                            
+                        });
+
+
 
                     }, 500);
 

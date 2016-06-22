@@ -72,7 +72,8 @@ input[type="button"]:hover,
 .my_account_orders a.button:hover, 
 .add_to_cart_inline .button:hover,
 .order-total .amount,
-.summary .single_variation .price ins .amount
+.summary .single_variation .price ins .amount,
+.menu-my-account a:hover
 {
     color:<?php echo overlap_get_color(); ?>;
 }

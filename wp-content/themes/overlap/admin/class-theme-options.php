@@ -1634,6 +1634,8 @@ if (!class_exists('Overlap_Theme_Options')) {
                             '2' => '2',
                             '3' => '3',
                             '4' => '4',
+                            '5' => '5',
+                            '6' => '6',                           
                         ),
                         'default'   => '4'
                     ),                    
