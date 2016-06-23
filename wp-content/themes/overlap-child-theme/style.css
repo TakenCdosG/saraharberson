@@ -8,3 +8,9 @@ Version: 1.0
 
 .testing{
 }
+#header.w-dark:before, .w-filter li.active a, .w-text-light .w-tabs .w-tab-wrapper .w-tab, .w-text-light .w-heading.heading-3 .w-wrapper, .post-thumb, .related-posts .thumb a span{
+	background:#0f2d52 !important;
+}
+h1, h2, h3, h4, h5, h6{
+	color:#0f2d52;
+}
