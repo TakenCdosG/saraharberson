@@ -14,3 +14,6 @@ Version: 1.0
 h1, h2, h3, h4, h5, h6{
 	color:#0f2d52;
 }
+#footer-content .w-posts .thumb{
+	display: none;
+}
