@@ -17,3 +17,62 @@ h1, h2, h3, h4, h5, h6{
 #footer-content .w-posts .thumb{
 	display: none !important;
 }
+.hbspt-form{
+	position: relative;
+}
+.hs_submit{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.actions{
+	margin: 0 !important;
+	padding: 0 !important;
+}
+label span{
+	display: none;
+}
+.hs-form .hs-input{
+	width: 95% !important;
+	max-width: 95% !important;
+}
+input.hs-input{
+	border-radius: 0 !important;
+	height: 33px !important;
+}
+.hs-button{
+	height: 33px !important;
+	width:190px;
+	padding: 5px 0 !important;
+	border-radius: 0 !important;
+}
+.hs-form .hs-button{
+	background-color:#ec4346 !important;
+	background-image: none !important;
+	border:none !important;
+
+}
+.hs-form.stacked .inputs-list>li label{
+	padding-left:13px;
+	color:#bbb !important;
+}
+.hs-form input:not([type="image"]), .hs-form textarea{
+	box-sizing:border-box !important;
+}
+
+@media (max-width: 600px) {
+  .hs-form .hs-input{
+  	width: 100% !important;
+	max-width: 100% !important;
+  	display: block;
+  }
+
+  .hs_submit{
+	position: absolute;
+	top: 60px;
+	left: 0;
+  }
+  .hs-button{
+	width: 100%;
+  }
+}
