@@ -8,6 +8,9 @@ Version: 1.0
 
 .testing{
 }
+*:not(i) {
+	font-family: Trebuchet MS !important;
+}
 #header.w-dark:before, .w-filter li.active a, .w-text-light .w-tabs .w-tab-wrapper .w-tab, .w-text-light .w-heading.heading-3 .w-wrapper, .post-thumb, .related-posts .thumb a span{
 	background:#0f2d52 !important;
 }
