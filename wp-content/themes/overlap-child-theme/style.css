@@ -62,6 +62,17 @@ h1, h2, h3, h4, h5, h6{
 .home .hs-form input:not([type="image"]), .hs-form textarea{
 	box-sizing:border-box !important;
 }
+.hs-button{
+	height: 33px !important;
+	padding: 5px 30px !important;
+	border-radius: 0 !important;
+}
+.hs-form .hs-button{
+	background-color:#ec4346 !important;
+	background-image: none !important;
+	border:none !important;
+
+}
 
 @media (max-width: 600px) {
   .home .hs-form .hs-input{
