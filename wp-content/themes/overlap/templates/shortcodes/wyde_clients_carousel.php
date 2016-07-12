@@ -39,7 +39,11 @@
         <div>
         <?php $image_attrs = wp_get_attachment_image_src($image_id, $image_size); ?>
         <?php if($image_attrs[0]) :?>
-            <img src="<?php echo esc_url( $image_attrs[0] ); ?>" alt="<?php esc_attr( $title ); ?>" />
+        <?php 
+            $this_img = get_post( $image_id ); // Get post by ID
+            $this_img_url = esc_url($this_img->post_content); // Display Description
+        ?>
+            <a href ="<?php echo $this_img_url;  ?>"><img src="<?php echo esc_url( $image_attrs[0] ); ?>" alt="<?php esc_attr( $title ); ?>" /></a>
         <?php endif; ?>
         </div>
     <?php } ?>
