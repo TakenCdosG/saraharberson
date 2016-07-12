@@ -216,7 +216,7 @@
                         items: items,
                         slideBy: items,
                         autoplay: (autoPlay != false),
-                        autoplayTimeout: autoPlay ? 4000 : false,
+                        autoplayTimeout: autoPlay ? 10000 : false,
                         nav: navigation,
                         dots: pagination,
                         loop: loop,
