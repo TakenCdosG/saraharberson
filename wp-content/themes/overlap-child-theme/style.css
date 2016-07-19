@@ -78,6 +78,11 @@ footer .hs-form input:not([type="image"]), .hs-form textarea{
 	height: auto !important;
 	line-height: 1.5 !important;
 }
+.w-blog-posts.w-overlap .post-title{
+	height: auto !important;
+	max-height: inherit !important;
+	white-space: inherit !important;
+}
 
 @media (max-width: 600px) {
   footer .hs-form .hs-input{
