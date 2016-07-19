@@ -83,6 +83,10 @@ footer .hs-form input:not([type="image"]), .hs-form textarea{
 	max-height: inherit !important;
 	white-space: inherit !important;
 }
+.widget_archive ul > li,
+    .widget_categories ul > li {
+    text-align: left !important;
+}
 
 @media (max-width: 600px) {
   footer .hs-form .hs-input{
