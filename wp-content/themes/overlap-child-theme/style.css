@@ -107,3 +107,6 @@ footer .hs-form input:not([type="image"]), .hs-form textarea{
 .leadinModal-content,.leadinModal-content * {
   transform: initial;
 }
+.leadinModal-close{
+	z-index: 9999;
+}
