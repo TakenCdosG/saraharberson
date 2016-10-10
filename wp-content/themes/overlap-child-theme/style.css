@@ -104,3 +104,6 @@ footer .hs-form input:not([type="image"]), .hs-form textarea{
 	width: 100%;
   }
 }
+.leadinModal-content,.leadinModal-content * {
+  transform: initial;
+}
