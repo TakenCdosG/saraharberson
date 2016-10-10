@@ -105,8 +105,8 @@ footer .hs-form input:not([type="image"]), .hs-form textarea{
   }
 }
 .leadinModal-content,.leadinModal-content * {
-  transform: initial;
+  transform: initial !important;
 }
-.leadinModal-close{
-	z-index: 9999;
+.leadinModal-close, .leadinModal.leadinModal-theme-default.leadinModal-v3 .leadinModal-close{
+	z-index: 9999 !important;
 }
