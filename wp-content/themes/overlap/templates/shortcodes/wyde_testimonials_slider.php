@@ -23,10 +23,15 @@
     $slider_attrs = array();
 
     $slider_attrs['class'] = 'owl-carousel';
-    $slider_attrs['data-auto-play'] = ($auto_play =='true' ? 'true':'false');
     $slider_attrs['data-navigation'] = ($show_navigation =='true' ? 'true':'false');
     $slider_attrs['data-pagination'] = ($show_pagination =='true' ? 'true':'false');
     $slider_attrs['data-loop'] = 'true';
+    if( $auto_play == 'true' ){
+        $slider_attrs['data-auto-play'] = 'true';
+        $slider_attrs['data-speed'] = $speed;
+    }else{
+        $slider_attrs['data-auto-play'] = 'false';
+    }
     if( !empty($transition) ) $slider_attrs['data-transition'] = $transition;
 
     if ( $count != '' && !is_numeric( $count ) ) $count = - 1;

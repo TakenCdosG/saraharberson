@@ -73,6 +73,18 @@ vc_map( array(
             'description' => __('Auto play slide.', 'overlap')
         ),
         array(
+            'param_name' => 'speed',
+            'type' => 'dropdown',
+            'heading' => esc_html__('Speed', 'overlap'),                    
+            'value' => array('1', '2', '3', '4', '5', '6', '7', '8', '9', '10'),
+            'std' => '4',
+            'description' => esc_html__('The amount of time between each slideshow interval (in seconds).', 'overlap'),
+            'dependency' => array(
+                'element' => 'auto_play',
+                'value' => 'true'
+            )
+        ),
+        array(
             'param_name' => 'animation',
             'type' => 'wyde_animation',
             'heading' => __('Animation', 'overlap'),                

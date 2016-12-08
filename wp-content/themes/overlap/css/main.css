@@ -1626,7 +1626,12 @@ a img.aligncenter {
     color: #fff;
     display: none;
     font-size: 17px;
-    margin: 0 0 5px 15px;
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
 }
 
 .pp_fade {
@@ -1724,6 +1729,16 @@ a img.aligncenter {
     color: #fff;
 }
 
+.pp_description {
+    position: absolute;
+    width: 100%;
+    padding: 0 60px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .pp_nav a {
     display: block;
     height: 20px;
@@ -1750,6 +1765,14 @@ a img.aligncenter {
 
 .pp_nav span {
     float: right;
+}
+
+/*------------------------------------------------------------------
+3.6 Gravity Form
+*/
+#content div.gform_wrapper input[type=checkbox], 
+#content div.gform_wrapper input[type=radio] {
+    width: 20px!important;
 }
 
 /*==================================================================
@@ -2301,8 +2324,8 @@ span:hover > .menu-icon:after {
 */
 .center-nav #top-nav .top-menu{
     text-align: center;
-    margin-right: 160px;
-    margin-left: 160px;
+    padding-right: 160px;
+    padding-left: 160px;
 }
 
 .center-nav .top-menu > li > a{
@@ -2785,7 +2808,7 @@ span:hover > .menu-icon:after {
     bottom: 0;
     color: #fff;
     opacity: 0;
-    padding: 85px 30px;
+    padding: 20px 0;
     visibility: hidden;
     overflow: hidden;
     -webkit-transition: opacity 0.5s ease-in-out;
@@ -2816,25 +2839,24 @@ body.full-nav-active #fullscreen-nav {
 }
 
 #fullscreen-nav .container {
-    height: 100%;
-    text-align: center;
-}
-
-
-
-#fullscreen-nav .full-nav-container{
     position: absolute;
-    width: 100%;
-    height: auto;
-    top: 50%;
     left: 0;
+    right: 0;
+    top: 50%;
+    text-align: center; 
     -ms-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+    transform: translateY(-50%);   
+}
+
+/* Fixes issues on IE10-11 */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+    #fullscreen-nav .container{
+        position: relative;
+    }
 }
 
 #fullscreen-nav .full-nav-wrapper {
-    height: 100%;
     -webkit-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
 }
@@ -2843,7 +2865,6 @@ body.full-nav-active #fullscreen-nav {
     position: relative;
     display: inline-block;
     width: 100%;
-    height: 100%;
     margin: 0;
     padding: 0;
     font-size: 28px;
@@ -5530,7 +5551,9 @@ ul li:hover .thumb > a > span.post-thumb {
 14.7 Search Page
 */
 .search-results{
-
+     position: relative;
+     clear: both;
+     float: none;
 }
 
 .search-query{
@@ -5555,7 +5578,6 @@ ul li:hover .thumb > a > span.post-thumb {
     overflow: hidden;
     text-align: center;
     margin: 5px 20px 5px 0;
-
 }
 
 .search-item .post-thumb{
@@ -5793,6 +5815,15 @@ ul.post-media li {
 .portfolio-category-widget ul li a,
 .portfolio-skill-widget ul li a {
     padding: 3px 0;
+}
+
+.portfolio-share a{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.portfolio-share a:first-child{
+    margin-left: 0;
 }
 
 /* Portfolio Overlap */
@@ -6194,16 +6225,16 @@ ul.post-media li {
     opacity: 1;
 }
 
-.woocommerce h2:not(.product_title) {
-    font-size: 20px;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 20px;
-    padding: 0;
-}
-
 .addresses {
     margin-bottom:80px;
+}
+
+.woocommerce h2:not(.product_title),
+.addresses .title h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding: 0;
 }
 
 .my_account_orders td {
@@ -6582,8 +6613,8 @@ ul.post-media li {
 .woocommerce-message {
     padding: 20px;
     margin: 0 0 30px 0;
-    border-top:2px solid #B3D3D8;
-    min-height:32px;
+    border-top: 3px solid #B3D3D8;
+    min-height: 32px;
     box-shadow: 0 2px 2px rgba(0,0,0,0.1);
 }
 
@@ -6597,11 +6628,11 @@ ul.post-media li {
 }
 
 .woocommerce-message {
-    border-color: #C6E2C8;
+    border-color: #F2FFF3;
 }
 
 .woocommerce-info {
-    border-color: #B3D3D8;
+    border-color: #DDEEF9;
 }
 
 .woocommerce-info:before {
@@ -6609,7 +6640,7 @@ ul.post-media li {
 }
 
 .woocommerce-error {
-    border-color: #F1BABA;
+    border-color: #FFEBEB;
 }
 
 .woocommerce-error li:before {
@@ -7154,6 +7185,7 @@ ul.post-media li {
 .order-details .order-total,
 .shop_table tfoot .order-total th{
     font-size:24px;
+    border-bottom: none;
 }
 
 .cart_totals table .shipping-calculator-form {
@@ -7164,6 +7196,7 @@ ul.post-media li {
 /* Checkout Page */
 .woocommerce-checkout h3 {
     text-transform: uppercase;
+    font-size: 22px;
 }
 
 #customer_details {
@@ -7211,6 +7244,8 @@ ul.post-media li {
 
 .shop_table.woocommerce-checkout-review-order-table {
     font-size: 13px;
+    border: none;
+    border-bottom: 5px double #e0dede;
 }
 
 .shop_table.woocommerce-checkout-review-order-table .product-name,
@@ -7373,6 +7408,10 @@ ul.post-media li {
     background: #fff;
 }
 
+.woocommerce-account h2{
+    text-align: center;
+}
+
 .woocommerce .login{
     max-width: 500px;
     margin: auto;
@@ -7419,6 +7458,10 @@ ul.post-media li {
     margin-bottom: 30px;
 }
 
+.woocommerce-MyAccount-content h2{
+     text-align: left;
+}
+
 .woocommerce-EditAccountForm .woocommerce-Button{
     margin-top: 30px;
 }
@@ -7434,7 +7477,7 @@ ul.post-media li {
     text-align: center;
 }
 
-.woocommerce .u-column1.col-1{
+.u-column1.col-1{
     width: 100%;
 }
 
@@ -7886,13 +7929,6 @@ MIN WIDTH QUERIES
     }
 }
 
-/* Ultra HD */
-@media only screen and (min-width: 1921px){
-    .w-section.w-full > .row {
-        max-width: 1920px;
-    }
-}
-
 
 /*------------------------------------------------------------------
 MAX WIDTH QUERIES
@@ -7968,8 +8004,8 @@ MAX WIDTH QUERIES
 /* Extra small & Small devices */
 @media only screen and (max-width: 991px) {
 
-    body{
-        overflow: hidden;
+    #content: {
+        overflow-x: hidden;
     }
     
     .sm-hide{

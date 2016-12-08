@@ -17,21 +17,24 @@
 
         $layout_attrs['class'] = 'w-grid-layout';
         $layout_attrs['class'] .= ' grid-'.intval( $columns ).'-cols clear';
-        if( intval($columns) == 5 ){
-            $col_name = ' five-cols';
-        }else{
-            $col_name = ' col-'.  absint( floor(12/ intval( $columns ) ) ); 
-        }
+        
+        $col_name = ' '.  overlap_get_column_name($columns); 
+        
 
     }else{       
 
         $classes[] = 'grid-'.$visible_items.'-cols';
         $layout_attrs['class'] = 'owl-carousel';        
         $layout_attrs['data-items'] = intval( $visible_items );
-        $layout_attrs['data-auto-play'] = ($auto_play =='true' ? 'true':'false');
         $layout_attrs['data-navigation'] = ($show_navigation =='true' ? 'true':'false');
         $layout_attrs['data-pagination'] = ($show_pagination =='true' ? 'true':'false');
         $layout_attrs['data-loop'] = ($slide_loop =='true' ? 'true':'false');
+        if( $auto_play == 'true' ){
+            $layout_attrs['data-auto-play'] = 'true';
+            $layout_attrs['data-speed'] = $speed;
+        }else{
+            $layout_attrs['data-auto-play'] = 'false';
+        }
         if( $visible_items == '1' && !empty($transition) ) $layout_attrs['data-transition'] = $transition;
 
     }

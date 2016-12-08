@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Overlap\n"
-"POT-Creation-Date: 2016-06-22 23:05+0700\n"
+"POT-Creation-Date: 2016-08-10 13:09+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -29,15 +29,15 @@ msgstr ""
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 
-#: admin/class-ajax-importer.php:65
+#: admin/class-ajax-importer.php:68
 msgid "All done"
 msgstr ""
 
-#: admin/class-ajax-importer.php:68
-msgid "There has been an error."
+#: admin/class-ajax-importer.php:71
+msgid "There was an error."
 msgstr ""
 
-#: admin/class-ajax-importer.php:72
+#: admin/class-ajax-importer.php:75
 msgid "Cannot access to Administration Panel options."
 msgstr ""
 
@@ -57,22 +57,74 @@ msgstr ""
 msgid "Are you sure you want to import settings of this site?"
 msgstr ""
 
-#: admin/class-theme-options.php:116
+#: admin/class-theme-options.php:117
+msgid "Posts"
+msgstr ""
+
+#: admin/class-theme-options.php:118
+msgid "Pages"
+msgstr ""
+
+#: admin/class-theme-options.php:119
+msgid "Contact Forms"
+msgstr ""
+
+#: admin/class-theme-options.php:120
+msgid "Portfolios"
+msgstr ""
+
+#: admin/class-theme-options.php:121
+msgid "Team Members"
+msgstr ""
+
+#: admin/class-theme-options.php:122
+msgid "Testimonials"
+msgstr ""
+
+#: admin/class-theme-options.php:123
+msgid "Sliders"
+msgstr ""
+
+#: admin/class-theme-options.php:124
+msgid "Menus"
+msgstr ""
+
+#: admin/class-theme-options.php:125
+msgid "Widgets"
+msgstr ""
+
+#: admin/class-theme-options.php:126
+msgid "Media"
+msgstr ""
+
+#: admin/class-theme-options.php:131
+msgid "Multi Pages"
+msgstr ""
+
+#: admin/class-theme-options.php:132
+msgid "One Page"
+msgstr ""
+
+#: admin/class-theme-options.php:134
+msgid "Import Content"
+msgstr ""
+
+#: admin/class-theme-options.php:145
 msgid "Import Demo Content"
 msgstr ""
 
-#: admin/class-theme-options.php:117
+#: admin/class-theme-options.php:146
 msgid ""
 "Please make sure you have required plugins installed and activated to "
 "receive that portion of the content. This is recommended to do on fresh "
 "installs."
 msgstr ""
 
-#: admin/class-theme-options.php:126
+#: admin/class-theme-options.php:155
 msgid "WARNING:"
 msgstr ""
 
-#: admin/class-theme-options.php:128
+#: admin/class-theme-options.php:157
 msgid ""
 "1. The Importing will append your current <strong>Pages, Posts and other "
 "content types</strong>, you should import them only once.\n"
@@ -81,474 +133,434 @@ msgid ""
 "a> plugin to remove all existing data before importing."
 msgstr ""
 
-#: admin/class-theme-options.php:138
-msgid "Posts"
-msgstr ""
-
-#: admin/class-theme-options.php:139
-msgid "Pages"
-msgstr ""
-
-#: admin/class-theme-options.php:140
-msgid "Contact Forms"
-msgstr ""
-
-#: admin/class-theme-options.php:141
-msgid "Portfolios"
-msgstr ""
-
-#: admin/class-theme-options.php:142
-msgid "Team Members"
-msgstr ""
-
-#: admin/class-theme-options.php:143
-msgid "Testimonials"
-msgstr ""
-
-#: admin/class-theme-options.php:144
-msgid "Sliders"
-msgstr ""
-
-#: admin/class-theme-options.php:145
-msgid "Menus"
-msgstr ""
-
-#: admin/class-theme-options.php:146
-msgid "Widgets"
-msgstr ""
-
-#: admin/class-theme-options.php:151
-msgid "Multi Pages"
-msgstr ""
-
-#: admin/class-theme-options.php:152
-msgid "One Page"
-msgstr ""
-
-#: admin/class-theme-options.php:154
-msgid "Import Content"
-msgstr ""
-
-#: admin/class-theme-options.php:161
+#: admin/class-theme-options.php:169
 msgid "Update Site Settings"
 msgstr ""
 
-#: admin/class-theme-options.php:162
+#: admin/class-theme-options.php:170
 msgid ""
 "The Importing will replace your current settings in Theme Options, you can "
 "update Settings as many times as you'd like to change the site settings to "
 "another demo."
 msgstr ""
 
-#: admin/class-theme-options.php:172
+#: admin/class-theme-options.php:180
 msgid "Creative Agency"
 msgstr ""
 
-#: admin/class-theme-options.php:173
+#: admin/class-theme-options.php:181
 msgid "Creative Studio"
 msgstr ""
 
-#: admin/class-theme-options.php:174
+#: admin/class-theme-options.php:182
 msgid "Corporate"
 msgstr ""
 
-#: admin/class-theme-options.php:175
+#: admin/class-theme-options.php:183
 msgid "Personal Portfolio"
 msgstr ""
 
-#: admin/class-theme-options.php:176
+#: admin/class-theme-options.php:184
 msgid "Travel Blog"
 msgstr ""
 
-#: admin/class-theme-options.php:180
+#: admin/class-theme-options.php:188
 msgid "Food Stylist"
 msgstr ""
 
-#: admin/class-theme-options.php:196
+#: admin/class-theme-options.php:204
 msgid "Success!"
 msgstr ""
 
-#: admin/class-theme-options.php:197
+#: admin/class-theme-options.php:205
 msgid "The demo content has been successfully imported."
 msgstr ""
 
-#: admin/class-theme-options.php:208
+#: admin/class-theme-options.php:216
 msgid "ERROR!"
 msgstr ""
 
-#: admin/class-theme-options.php:209
+#: admin/class-theme-options.php:217
 msgid "An error occurred while importing demo data, please try again later."
 msgstr ""
 
-#: admin/class-theme-options.php:215
+#: admin/class-theme-options.php:223
 msgid "Home"
 msgstr ""
 
-#: admin/class-theme-options.php:233
+#: admin/class-theme-options.php:241
 msgid "General"
 msgstr ""
 
-#: admin/class-theme-options.php:239 admin/class-theme-options.php:254
+#: admin/class-theme-options.php:247 admin/class-theme-options.php:262
 msgid "Color Scheme"
 msgstr ""
 
-#: admin/class-theme-options.php:240
+#: admin/class-theme-options.php:248
 msgid "Select your website color scheme from predefined colors."
 msgstr ""
 
-#: admin/class-theme-options.php:247
+#: admin/class-theme-options.php:255
 msgid "Custom Color Scheme"
 msgstr ""
 
-#: admin/class-theme-options.php:248
+#: admin/class-theme-options.php:256
 msgid "Use custom color from color picker."
 msgstr ""
 
-#: admin/class-theme-options.php:255
+#: admin/class-theme-options.php:263
 msgid "Choose your own color scheme."
 msgstr ""
 
-#: admin/class-theme-options.php:263
+#: admin/class-theme-options.php:271
 msgid "Smooth Scrolling"
 msgstr ""
 
-#: admin/class-theme-options.php:264
+#: admin/class-theme-options.php:272
 msgid "Enable the smooth scrolling."
 msgstr ""
 
-#: admin/class-theme-options.php:270
+#: admin/class-theme-options.php:278
+msgid "Lightbox Title"
+msgstr ""
+
+#: admin/class-theme-options.php:279
+msgid "Display the lightbox title."
+msgstr ""
+
+#: admin/class-theme-options.php:285
 msgid "Back To Top Button"
 msgstr ""
 
-#: admin/class-theme-options.php:271
+#: admin/class-theme-options.php:286
 msgid "Enable a back to top button."
 msgstr ""
 
-#: admin/class-theme-options.php:277
+#: admin/class-theme-options.php:292
 msgid "Preload Images"
 msgstr ""
 
-#: admin/class-theme-options.php:278
+#: admin/class-theme-options.php:293
 msgid ""
 "Preloading images definitely helps users enjoy a better experience when "
 "viewing your content."
 msgstr ""
 
-#: admin/class-theme-options.php:284
+#: admin/class-theme-options.php:299
 msgid "Loader"
 msgstr ""
 
-#: admin/class-theme-options.php:285
+#: admin/class-theme-options.php:300
 msgid "Select a loader animation."
 msgstr ""
 
-#: admin/class-theme-options.php:298
+#: admin/class-theme-options.php:313
 msgid "Loader Icon"
 msgstr ""
 
-#: admin/class-theme-options.php:302
+#: admin/class-theme-options.php:317
 msgid "Loader image to display at the center of the loader animation."
 msgstr ""
 
-#: admin/class-theme-options.php:303
+#: admin/class-theme-options.php:318
 msgid "Maximum height: 70px."
 msgstr ""
 
-#: admin/class-theme-options.php:311
+#: admin/class-theme-options.php:326
 msgid "Animation on Mobile"
 msgstr ""
 
-#: admin/class-theme-options.php:312
+#: admin/class-theme-options.php:327
 msgid "Enable animated elements on mobile devices."
 msgstr ""
 
-#: admin/class-theme-options.php:318
+#: admin/class-theme-options.php:333
 msgid "Page Zooming on Mobile"
 msgstr ""
 
-#: admin/class-theme-options.php:319
+#: admin/class-theme-options.php:334
 msgid "Allow users to zoom in and out on website."
 msgstr ""
 
-#: admin/class-theme-options.php:333 admin/class-theme-options.php:339
+#: admin/class-theme-options.php:348 admin/class-theme-options.php:354
 msgid "Favicon"
 msgstr ""
 
-#: admin/class-theme-options.php:340
+#: admin/class-theme-options.php:355
 msgid "Customize a favicon for your site."
 msgstr ""
 
-#: admin/class-theme-options.php:347
+#: admin/class-theme-options.php:362
 msgid "Favicon Image (.PNG)"
 msgstr ""
 
-#: admin/class-theme-options.php:349
+#: admin/class-theme-options.php:364
 msgid ""
 "Upload a favicon image for your site, or you can specify an image URL "
 "directly."
 msgstr ""
 
-#: admin/class-theme-options.php:350 admin/class-theme-options.php:362
-#: admin/class-theme-options.php:373 admin/class-theme-options.php:383
-#: admin/class-theme-options.php:393 admin/class-theme-options.php:403
+#: admin/class-theme-options.php:365 admin/class-theme-options.php:377
+#: admin/class-theme-options.php:388 admin/class-theme-options.php:398
+#: admin/class-theme-options.php:408 admin/class-theme-options.php:418
 msgid "Icon dimension:"
 msgstr ""
 
-#: admin/class-theme-options.php:359
+#: admin/class-theme-options.php:374
 msgid "Favicon (.ICO)"
 msgstr ""
 
-#: admin/class-theme-options.php:361
+#: admin/class-theme-options.php:376
 msgid ""
 "Upload a favicon for your site, or you can specify an icon URL directly."
 msgstr ""
 
-#: admin/class-theme-options.php:369
+#: admin/class-theme-options.php:384
 msgid "Apple iPhone Icon"
 msgstr ""
 
-#: admin/class-theme-options.php:372
+#: admin/class-theme-options.php:387
 msgid "Favicon for Apple iPhone."
 msgstr ""
 
-#: admin/class-theme-options.php:379
+#: admin/class-theme-options.php:394
 msgid "Apple iPhone Icon (Retina Version)"
 msgstr ""
 
-#: admin/class-theme-options.php:382
+#: admin/class-theme-options.php:397
 msgid "Favicon for Apple iPhone Retina Version."
 msgstr ""
 
-#: admin/class-theme-options.php:389
+#: admin/class-theme-options.php:404
 msgid "Apple iPad Icon"
 msgstr ""
 
-#: admin/class-theme-options.php:392
+#: admin/class-theme-options.php:407
 msgid "Favicon for Apple iPad."
 msgstr ""
 
-#: admin/class-theme-options.php:399
+#: admin/class-theme-options.php:414
 msgid "Apple iPad Icon (Retina Version)"
 msgstr ""
 
-#: admin/class-theme-options.php:402
+#: admin/class-theme-options.php:417
 msgid "Favicon for Apple iPad Retina Version."
 msgstr ""
 
-#: admin/class-theme-options.php:413 admin/class-theme-options.php:419
+#: admin/class-theme-options.php:428 admin/class-theme-options.php:434
 msgid "Navigation"
 msgstr ""
 
-#: admin/class-theme-options.php:420
+#: admin/class-theme-options.php:435
 msgid "Customize the primary navigation."
 msgstr ""
 
-#: admin/class-theme-options.php:426 admin/class-theme-options.php:715
-#: admin/class-theme-options.php:1058 admin/class-theme-options.php:1385
-#: admin/class-theme-options.php:1560 inc/metaboxes/page-options.php:39
+#: admin/class-theme-options.php:441 admin/class-theme-options.php:729
+#: admin/class-theme-options.php:1072 admin/class-theme-options.php:1399
+#: admin/class-theme-options.php:1588 inc/metaboxes/page-options.php:39
 #: inc/metaboxes/wyde_portfolio-options.php:18
 #: inc/shortcodes/wyde-blog-posts.php:17
 msgid "Layout"
 msgstr ""
 
-#: admin/class-theme-options.php:427
+#: admin/class-theme-options.php:442
 msgid "Select a navigation layout."
 msgstr ""
 
-#: admin/class-theme-options.php:429
+#: admin/class-theme-options.php:444
 msgid "Classic"
 msgstr ""
 
-#: admin/class-theme-options.php:430 admin/class-theme-options.php:862
+#: admin/class-theme-options.php:445 admin/class-theme-options.php:876
 #: inc/metaboxes/page-options.php:226 inc/metaboxes/post-options.php:266
 #: inc/metaboxes/wyde_portfolio-options.php:306
 msgid "Center"
 msgstr ""
 
-#: admin/class-theme-options.php:431 admin/class-theme-options.php:821
+#: admin/class-theme-options.php:446 admin/class-theme-options.php:835
 #: inc/metaboxes/page-options.php:191 inc/metaboxes/post-options.php:223
 #: inc/metaboxes/wyde_portfolio-options.php:263
 msgid "Full Screen"
 msgstr ""
 
-#: admin/class-theme-options.php:438
+#: admin/class-theme-options.php:453
 msgid "Shopping Cart Icon"
 msgstr ""
 
-#: admin/class-theme-options.php:439
+#: admin/class-theme-options.php:454
 msgid "Turn on to display the shopping cart icon."
 msgstr ""
 
-#: admin/class-theme-options.php:445
+#: admin/class-theme-options.php:460
 msgid "Search Icon"
 msgstr ""
 
-#: admin/class-theme-options.php:446
+#: admin/class-theme-options.php:461
 msgid "Turn on to display the search icon."
 msgstr ""
 
-#: admin/class-theme-options.php:453 functions.php:104
+#: admin/class-theme-options.php:467 functions.php:104
 msgid "Sliding Bar"
 msgstr ""
 
-#: admin/class-theme-options.php:454
+#: admin/class-theme-options.php:468
 msgid "Turn on to display a sliding widget area."
 msgstr ""
 
-#: admin/class-theme-options.php:460 admin/class-theme-options.php:771
+#: admin/class-theme-options.php:474 admin/class-theme-options.php:785
 msgid "Social Icons"
 msgstr ""
 
-#: admin/class-theme-options.php:461
+#: admin/class-theme-options.php:475
 msgid ""
 "Turn on to display the social media icons in mobile navigation and "
 "slidingbar."
 msgstr ""
 
-#: admin/class-theme-options.php:467
+#: admin/class-theme-options.php:481
 msgid "Contact Info"
 msgstr ""
 
-#: admin/class-theme-options.php:468
+#: admin/class-theme-options.php:482
 msgid ""
 "Turn on to display the contact info in mobile navigation and slidingbar."
 msgstr ""
 
-#: admin/class-theme-options.php:475
+#: admin/class-theme-options.php:489
 msgid "Contact Info Items"
 msgstr ""
 
-#: admin/class-theme-options.php:476
+#: admin/class-theme-options.php:490
 msgid "The contact items to display in the left menu and sliding bar."
 msgstr ""
 
-#: admin/class-theme-options.php:477 admin/class-theme-options.php:1881
+#: admin/class-theme-options.php:491 admin/class-theme-options.php:1909
 msgid "Add New"
 msgstr ""
 
-#: admin/class-theme-options.php:488
+#: admin/class-theme-options.php:502
 msgid "Top Navigation"
 msgstr ""
 
-#: admin/class-theme-options.php:489
+#: admin/class-theme-options.php:503
 msgid "Customize the page header and top menu."
 msgstr ""
 
-#: admin/class-theme-options.php:495
+#: admin/class-theme-options.php:509
 msgid "Sticky Header"
 msgstr ""
 
-#: admin/class-theme-options.php:496
+#: admin/class-theme-options.php:510
 msgid "Enable sticky header."
 msgstr ""
 
-#: admin/class-theme-options.php:502 admin/class-theme-options.php:682
-#: admin/class-theme-options.php:1167 admin/class-theme-options.php:1179
-#: admin/class-theme-options.php:1461
+#: admin/class-theme-options.php:516 admin/class-theme-options.php:696
+#: admin/class-theme-options.php:1181 admin/class-theme-options.php:1193
+#: admin/class-theme-options.php:1482
 msgid "Full Width"
 msgstr ""
 
-#: admin/class-theme-options.php:503
+#: admin/class-theme-options.php:517
 msgid "Turn on to use full width header or off to use fixed header width."
 msgstr ""
 
-#: admin/class-theme-options.php:509
+#: admin/class-theme-options.php:523
 msgid "Header Background"
 msgstr ""
 
-#: admin/class-theme-options.php:510
+#: admin/class-theme-options.php:524
 msgid "Select a header navigation background style."
 msgstr ""
 
-#: admin/class-theme-options.php:512 admin/class-theme-options.php:575
-#: admin/class-theme-options.php:1050 admin/class-theme-options.php:1364
-#: admin/class-theme-options.php:1750 inc/metaboxes/page-options.php:89
+#: admin/class-theme-options.php:526 admin/class-theme-options.php:589
+#: admin/class-theme-options.php:1064 admin/class-theme-options.php:1378
+#: admin/class-theme-options.php:1778 inc/metaboxes/page-options.php:89
 #: inc/metaboxes/page-options.php:136 inc/metaboxes/post-options.php:161
 #: inc/metaboxes/wyde_portfolio-options.php:200
 msgid "Light"
 msgstr ""
 
-#: admin/class-theme-options.php:513 admin/class-theme-options.php:574
-#: admin/class-theme-options.php:1049 admin/class-theme-options.php:1363
-#: admin/class-theme-options.php:1749 inc/metaboxes/page-options.php:88
+#: admin/class-theme-options.php:527 admin/class-theme-options.php:588
+#: admin/class-theme-options.php:1063 admin/class-theme-options.php:1377
+#: admin/class-theme-options.php:1777 inc/metaboxes/page-options.php:88
 #: inc/metaboxes/page-options.php:137 inc/metaboxes/post-options.php:162
 #: inc/metaboxes/wyde_portfolio-options.php:201
 msgid "Dark"
 msgstr ""
 
-#: admin/class-theme-options.php:520
+#: admin/class-theme-options.php:534
 msgid "Dark Logo"
 msgstr ""
 
-#: admin/class-theme-options.php:522
+#: admin/class-theme-options.php:536
 msgid "Dark color of logo for light header."
 msgstr ""
 
-#: admin/class-theme-options.php:523 admin/class-theme-options.php:545
+#: admin/class-theme-options.php:537 admin/class-theme-options.php:559
 msgid "Recommended height: 70px or larger."
 msgstr ""
 
-#: admin/class-theme-options.php:531
+#: admin/class-theme-options.php:545
 msgid "Dark Sticky Logo"
 msgstr ""
 
-#: admin/class-theme-options.php:533
+#: admin/class-theme-options.php:547
 msgid "Dark color of sticky header logo for light header."
 msgstr ""
 
-#: admin/class-theme-options.php:534 admin/class-theme-options.php:556
+#: admin/class-theme-options.php:548 admin/class-theme-options.php:570
 msgid "Recommended height: 50px or larger."
 msgstr ""
 
-#: admin/class-theme-options.php:542
+#: admin/class-theme-options.php:556
 msgid "Light Logo"
 msgstr ""
 
-#: admin/class-theme-options.php:544
+#: admin/class-theme-options.php:558
 msgid "Light color of logo for dark header."
 msgstr ""
 
-#: admin/class-theme-options.php:553
+#: admin/class-theme-options.php:567
 msgid "Light Sticky Logo"
 msgstr ""
 
-#: admin/class-theme-options.php:555
+#: admin/class-theme-options.php:569
 msgid "Light color of sticky logo for dark header."
 msgstr ""
 
-#: admin/class-theme-options.php:564
+#: admin/class-theme-options.php:578
 msgid "Mobile Navigation"
 msgstr ""
 
-#: admin/class-theme-options.php:565
+#: admin/class-theme-options.php:579
 msgid "Customize the mobile navigation."
 msgstr ""
 
-#: admin/class-theme-options.php:571
+#: admin/class-theme-options.php:585
 msgid "Text Style"
 msgstr ""
 
-#: admin/class-theme-options.php:572
+#: admin/class-theme-options.php:586
 msgid "Select navigation text style."
 msgstr ""
 
-#: admin/class-theme-options.php:576 admin/class-theme-options.php:1221
+#: admin/class-theme-options.php:590 admin/class-theme-options.php:1235
 msgid "Custom"
 msgstr ""
 
-#: admin/class-theme-options.php:584 admin/class-theme-options.php:690
-#: admin/class-theme-options.php:848 inc/metaboxes/page-options.php:234
+#: admin/class-theme-options.php:598 admin/class-theme-options.php:704
+#: admin/class-theme-options.php:862 inc/metaboxes/page-options.php:234
 #: inc/metaboxes/post-options.php:252
 #: inc/metaboxes/wyde_portfolio-options.php:292
 msgid "Text Color"
 msgstr ""
 
-#: admin/class-theme-options.php:585
+#: admin/class-theme-options.php:599
 msgid "Set navigation text color."
 msgstr ""
 
-#: admin/class-theme-options.php:593 admin/class-theme-options.php:700
-#: admin/class-theme-options.php:870 inc/metaboxes/page-options.php:242
+#: admin/class-theme-options.php:607 admin/class-theme-options.php:714
+#: admin/class-theme-options.php:884 inc/metaboxes/page-options.php:242
 #: inc/metaboxes/page-options.php:339 inc/metaboxes/page-options.php:346
 #: inc/metaboxes/post-options.php:274 inc/metaboxes/post-options.php:370
 #: inc/metaboxes/post-options.php:377
@@ -558,11 +570,11 @@ msgstr ""
 msgid "Background"
 msgstr ""
 
-#: admin/class-theme-options.php:594
+#: admin/class-theme-options.php:608
 msgid "Set a side nav background."
 msgstr ""
 
-#: admin/class-theme-options.php:607 admin/class-theme-options.php:922
+#: admin/class-theme-options.php:621 admin/class-theme-options.php:936
 #: inc/metaboxes/page-options.php:292 inc/metaboxes/page-options.php:386
 #: inc/metaboxes/post-options.php:324 inc/metaboxes/post-options.php:417
 #: inc/metaboxes/wyde_portfolio-options.php:364
@@ -570,13 +582,13 @@ msgstr ""
 msgid "Background Overlay Color"
 msgstr ""
 
-#: admin/class-theme-options.php:608 admin/class-theme-options.php:923
+#: admin/class-theme-options.php:622 admin/class-theme-options.php:937
 #: inc/metaboxes/page-options.php:293 inc/metaboxes/post-options.php:325
 #: inc/metaboxes/wyde_portfolio-options.php:365
 msgid "Select background overlay color."
 msgstr ""
 
-#: admin/class-theme-options.php:615 admin/class-theme-options.php:934
+#: admin/class-theme-options.php:629 admin/class-theme-options.php:948
 #: inc/metaboxes/page-options.php:301 inc/metaboxes/page-options.php:394
 #: inc/metaboxes/post-options.php:332 inc/metaboxes/post-options.php:425
 #: inc/metaboxes/wyde_portfolio-options.php:372
@@ -584,7 +596,7 @@ msgstr ""
 msgid "Background Overlay Opacity"
 msgstr ""
 
-#: admin/class-theme-options.php:616 admin/class-theme-options.php:935
+#: admin/class-theme-options.php:630 admin/class-theme-options.php:949
 #: inc/metaboxes/page-options.php:302 inc/metaboxes/page-options.php:395
 #: inc/metaboxes/post-options.php:333 inc/metaboxes/post-options.php:426
 #: inc/metaboxes/wyde_portfolio-options.php:373
@@ -592,7 +604,7 @@ msgstr ""
 msgid "Select background overlay opacity."
 msgstr ""
 
-#: admin/class-theme-options.php:639 inc/metaboxes/page-options.php:417
+#: admin/class-theme-options.php:653 inc/metaboxes/page-options.php:417
 #: inc/metaboxes/page-options.php:435 inc/metaboxes/post-options.php:493
 #: inc/metaboxes/post-options.php:511
 #: inc/metaboxes/wyde_portfolio-options.php:487
@@ -600,107 +612,107 @@ msgstr ""
 msgid "Footer"
 msgstr ""
 
-#: admin/class-theme-options.php:645 admin/class-theme-options.php:652
+#: admin/class-theme-options.php:659 admin/class-theme-options.php:666
 #: inc/metaboxes/page-options.php:424 inc/metaboxes/post-options.php:500
 #: inc/metaboxes/wyde_portfolio-options.php:494
 msgid "Footer Content"
 msgstr ""
 
-#: admin/class-theme-options.php:646
+#: admin/class-theme-options.php:660
 msgid "Customize the footer content."
 msgstr ""
 
-#: admin/class-theme-options.php:653
+#: admin/class-theme-options.php:667
 msgid "Display footer content area."
 msgstr ""
 
-#: admin/class-theme-options.php:660 admin/class-theme-options.php:974
+#: admin/class-theme-options.php:674 admin/class-theme-options.php:988
 #: inc/metaboxes/page-options.php:23
 msgid "Page"
 msgstr ""
 
-#: admin/class-theme-options.php:661
+#: admin/class-theme-options.php:675
 msgid "Select a page to display in the footer content area."
 msgstr ""
 
-#: admin/class-theme-options.php:667 admin/class-theme-options.php:674
+#: admin/class-theme-options.php:681 admin/class-theme-options.php:688
 msgid "Footer Bar"
 msgstr ""
 
-#: admin/class-theme-options.php:668
+#: admin/class-theme-options.php:682
 msgid "Customize the footer bar."
 msgstr ""
 
-#: admin/class-theme-options.php:675
+#: admin/class-theme-options.php:689
 msgid "Display a footer bar at the bottom of the page."
 msgstr ""
 
-#: admin/class-theme-options.php:683
+#: admin/class-theme-options.php:697
 msgid "Display a footer bar as full width."
 msgstr ""
 
-#: admin/class-theme-options.php:691
+#: admin/class-theme-options.php:705
 msgid "Set a footer bar text color."
 msgstr ""
 
-#: admin/class-theme-options.php:701
+#: admin/class-theme-options.php:715
 msgid "Set a footer bar background."
 msgstr ""
 
-#: admin/class-theme-options.php:716
+#: admin/class-theme-options.php:730
 msgid "Select footer bar layout."
 msgstr ""
 
-#: admin/class-theme-options.php:728
+#: admin/class-theme-options.php:742
 msgid "Footer Logo"
 msgstr ""
 
-#: admin/class-theme-options.php:729
+#: admin/class-theme-options.php:743
 msgid "Display footer logo."
 msgstr ""
 
-#: admin/class-theme-options.php:737
+#: admin/class-theme-options.php:751
 msgid "Footer Logo Image"
 msgstr ""
 
-#: admin/class-theme-options.php:740
+#: admin/class-theme-options.php:754
 msgid "Upload a footer logo image, or you can specify an image URL directly."
 msgstr ""
 
-#: admin/class-theme-options.php:750
+#: admin/class-theme-options.php:764
 msgid "Footer Logo (Retina Version)"
 msgstr ""
 
-#: admin/class-theme-options.php:753
+#: admin/class-theme-options.php:767
 msgid "Upload a retina logo image, or you can specify an image URL directly."
 msgstr ""
 
-#: admin/class-theme-options.php:754
+#: admin/class-theme-options.php:768
 msgid "It should be exactly 2x the size of normal logo."
 msgstr ""
 
-#: admin/class-theme-options.php:763
+#: admin/class-theme-options.php:777
 msgid "Footer Menu"
 msgstr ""
 
-#: admin/class-theme-options.php:764
+#: admin/class-theme-options.php:778
 msgid "Display footer menu."
 msgstr ""
 
-#: admin/class-theme-options.php:772
+#: admin/class-theme-options.php:786
 msgid "Display social icons."
 msgstr ""
 
-#: admin/class-theme-options.php:779
+#: admin/class-theme-options.php:793
 msgid "Footer Text"
 msgstr ""
 
-#: admin/class-theme-options.php:780
+#: admin/class-theme-options.php:794
 msgid "Display footer text."
 msgstr ""
 
-#: admin/class-theme-options.php:802 admin/class-theme-options.php:808
-#: admin/class-theme-options.php:1328 admin/class-theme-options.php:1530
+#: admin/class-theme-options.php:816 admin/class-theme-options.php:822
+#: admin/class-theme-options.php:1342 admin/class-theme-options.php:1558
 #: inc/metaboxes/page-options.php:148 inc/metaboxes/post-options.php:173
 #: inc/metaboxes/post-options.php:180
 #: inc/metaboxes/wyde_portfolio-options.php:212
@@ -708,52 +720,52 @@ msgstr ""
 msgid "Title Area"
 msgstr ""
 
-#: admin/class-theme-options.php:809
+#: admin/class-theme-options.php:823
 msgid "Default settings for title area."
 msgstr ""
 
-#: admin/class-theme-options.php:815 inc/metaboxes/page-options.php:183
+#: admin/class-theme-options.php:829 inc/metaboxes/page-options.php:183
 #: inc/metaboxes/post-options.php:215
 #: inc/metaboxes/wyde_portfolio-options.php:255
 msgid "Size"
 msgstr ""
 
-#: admin/class-theme-options.php:816
+#: admin/class-theme-options.php:830
 msgid "Select the title size."
 msgstr ""
 
-#: admin/class-theme-options.php:818 inc/metaboxes/page-options.php:188
+#: admin/class-theme-options.php:832 inc/metaboxes/page-options.php:188
 #: inc/metaboxes/post-options.php:220
 #: inc/metaboxes/wyde_portfolio-options.php:260
 msgid "Small"
 msgstr ""
 
-#: admin/class-theme-options.php:819 inc/metaboxes/page-options.php:189
+#: admin/class-theme-options.php:833 inc/metaboxes/page-options.php:189
 #: inc/metaboxes/post-options.php:221
 #: inc/metaboxes/wyde_portfolio-options.php:261
 msgid "Medium"
 msgstr ""
 
-#: admin/class-theme-options.php:820 inc/metaboxes/page-options.php:190
+#: admin/class-theme-options.php:834 inc/metaboxes/page-options.php:190
 #: inc/metaboxes/post-options.php:222
 #: inc/metaboxes/wyde_portfolio-options.php:262
 msgid "Large"
 msgstr ""
 
-#: admin/class-theme-options.php:828 inc/metaboxes/page-options.php:198
+#: admin/class-theme-options.php:842 inc/metaboxes/page-options.php:198
 #: inc/metaboxes/post-options.php:230
 #: inc/metaboxes/wyde_portfolio-options.php:270
 msgid "Scrolling Effect"
 msgstr ""
 
-#: admin/class-theme-options.php:829 inc/metaboxes/page-options.php:199
+#: admin/class-theme-options.php:843 inc/metaboxes/page-options.php:199
 #: inc/metaboxes/post-options.php:231
 #: inc/metaboxes/wyde_portfolio-options.php:271
 msgid "Select a scrolling animation for title text and subtitle."
 msgstr ""
 
-#: admin/class-theme-options.php:831 admin/class-theme-options.php:873
-#: admin/class-theme-options.php:959 inc/class-shortcode.php:175
+#: admin/class-theme-options.php:845 admin/class-theme-options.php:887
+#: admin/class-theme-options.php:973 inc/class-shortcode.php:175
 #: inc/metaboxes/page-options.php:203 inc/metaboxes/page-options.php:247
 #: inc/metaboxes/page-options.php:325 inc/metaboxes/page-options.php:350
 #: inc/metaboxes/post-options.php:235 inc/metaboxes/post-options.php:279
@@ -766,13 +778,13 @@ msgstr ""
 msgid "None"
 msgstr ""
 
-#: admin/class-theme-options.php:832 inc/metaboxes/page-options.php:204
+#: admin/class-theme-options.php:846 inc/metaboxes/page-options.php:204
 #: inc/metaboxes/post-options.php:236
 #: inc/metaboxes/wyde_portfolio-options.php:276
 msgid "Split"
 msgstr ""
 
-#: admin/class-theme-options.php:833 admin/class-theme-options.php:960
+#: admin/class-theme-options.php:847 admin/class-theme-options.php:974
 #: inc/metaboxes/page-options.php:205 inc/metaboxes/page-options.php:327
 #: inc/metaboxes/post-options.php:237 inc/metaboxes/post-options.php:358
 #: inc/metaboxes/wyde_portfolio-options.php:277
@@ -780,93 +792,93 @@ msgstr ""
 msgid "Fade Out"
 msgstr ""
 
-#: admin/class-theme-options.php:834 inc/metaboxes/page-options.php:206
+#: admin/class-theme-options.php:848 inc/metaboxes/page-options.php:206
 #: inc/metaboxes/post-options.php:238
 #: inc/metaboxes/wyde_portfolio-options.php:278
 msgid "Fade Out Up"
 msgstr ""
 
-#: admin/class-theme-options.php:835 inc/metaboxes/page-options.php:207
+#: admin/class-theme-options.php:849 inc/metaboxes/page-options.php:207
 #: inc/metaboxes/post-options.php:239
 #: inc/metaboxes/wyde_portfolio-options.php:279
 msgid "Fade Out Down"
 msgstr ""
 
-#: admin/class-theme-options.php:836 inc/metaboxes/page-options.php:208
+#: admin/class-theme-options.php:850 inc/metaboxes/page-options.php:208
 #: inc/metaboxes/post-options.php:240
 #: inc/metaboxes/wyde_portfolio-options.php:280
 #: inc/shortcodes/wyde-image-gallery.php:88
 msgid "Zoom In"
 msgstr ""
 
-#: admin/class-theme-options.php:837 inc/metaboxes/page-options.php:209
+#: admin/class-theme-options.php:851 inc/metaboxes/page-options.php:209
 #: inc/metaboxes/post-options.php:241
 #: inc/metaboxes/wyde_portfolio-options.php:281
 msgid "Zoom In Up"
 msgstr ""
 
-#: admin/class-theme-options.php:838 inc/metaboxes/page-options.php:210
+#: admin/class-theme-options.php:852 inc/metaboxes/page-options.php:210
 #: inc/metaboxes/post-options.php:242
 #: inc/metaboxes/wyde_portfolio-options.php:282
 msgid "Zoom In Down"
 msgstr ""
 
-#: admin/class-theme-options.php:839 inc/metaboxes/page-options.php:211
+#: admin/class-theme-options.php:853 inc/metaboxes/page-options.php:211
 #: inc/metaboxes/post-options.php:243
 #: inc/metaboxes/wyde_portfolio-options.php:283
 #: inc/shortcodes/wyde-image-gallery.php:89
 msgid "Zoom Out"
 msgstr ""
 
-#: admin/class-theme-options.php:840 inc/metaboxes/page-options.php:212
+#: admin/class-theme-options.php:854 inc/metaboxes/page-options.php:212
 #: inc/metaboxes/post-options.php:244
 #: inc/metaboxes/wyde_portfolio-options.php:284
 msgid "Zoom Out Up"
 msgstr ""
 
-#: admin/class-theme-options.php:841 inc/metaboxes/page-options.php:213
+#: admin/class-theme-options.php:855 inc/metaboxes/page-options.php:213
 #: inc/metaboxes/post-options.php:245
 #: inc/metaboxes/wyde_portfolio-options.php:285
 msgid "Zoom Out Down"
 msgstr ""
 
-#: admin/class-theme-options.php:849 inc/metaboxes/page-options.php:235
+#: admin/class-theme-options.php:863 inc/metaboxes/page-options.php:235
 #: inc/metaboxes/post-options.php:253
 #: inc/metaboxes/wyde_portfolio-options.php:293
 msgid "Select the title text color."
 msgstr ""
 
-#: admin/class-theme-options.php:857 inc/metaboxes/page-options.php:220
+#: admin/class-theme-options.php:871 inc/metaboxes/page-options.php:220
 #: inc/metaboxes/post-options.php:260
 #: inc/metaboxes/wyde_portfolio-options.php:300
 msgid "Alignment"
 msgstr ""
 
-#: admin/class-theme-options.php:858
+#: admin/class-theme-options.php:872
 msgid "Select the title alignment."
 msgstr ""
 
-#: admin/class-theme-options.php:860
+#: admin/class-theme-options.php:874
 msgid "Not Set"
 msgstr ""
 
-#: admin/class-theme-options.php:861 inc/metaboxes/page-options.php:225
+#: admin/class-theme-options.php:875 inc/metaboxes/page-options.php:225
 #: inc/metaboxes/post-options.php:265
 #: inc/metaboxes/wyde_portfolio-options.php:305
 msgid "Left"
 msgstr ""
 
-#: admin/class-theme-options.php:863 inc/metaboxes/page-options.php:227
+#: admin/class-theme-options.php:877 inc/metaboxes/page-options.php:227
 #: inc/metaboxes/post-options.php:267
 #: inc/metaboxes/wyde_portfolio-options.php:307
 msgid "Right"
 msgstr ""
 
-#: admin/class-theme-options.php:871
+#: admin/class-theme-options.php:885
 msgid "Select background type."
 msgstr ""
 
-#: admin/class-theme-options.php:874 inc/metaboxes/page-options.php:248
+#: admin/class-theme-options.php:888 inc/metaboxes/page-options.php:248
 #: inc/metaboxes/page-options.php:351 inc/metaboxes/post-options.php:280
 #: inc/metaboxes/post-options.php:382
 #: inc/metaboxes/wyde_portfolio-options.php:320
@@ -874,7 +886,7 @@ msgstr ""
 msgid "Color"
 msgstr ""
 
-#: admin/class-theme-options.php:875 inc/class-shortcode.php:110
+#: admin/class-theme-options.php:889 inc/class-shortcode.php:110
 #: inc/metaboxes/page-options.php:249 inc/metaboxes/page-options.php:352
 #: inc/metaboxes/post-options.php:281 inc/metaboxes/post-options.php:383
 #: inc/metaboxes/wyde_portfolio-options.php:321
@@ -883,13 +895,13 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
-#: admin/class-theme-options.php:876 inc/metaboxes/page-options.php:250
+#: admin/class-theme-options.php:890 inc/metaboxes/page-options.php:250
 #: inc/metaboxes/post-options.php:282
 #: inc/metaboxes/wyde_portfolio-options.php:322
 msgid "Video"
 msgstr ""
 
-#: admin/class-theme-options.php:887 inc/metaboxes/page-options.php:257
+#: admin/class-theme-options.php:901 inc/metaboxes/page-options.php:257
 #: inc/metaboxes/page-options.php:359 inc/metaboxes/post-options.php:289
 #: inc/metaboxes/post-options.php:390
 #: inc/metaboxes/wyde_portfolio-options.php:329
@@ -897,21 +909,21 @@ msgstr ""
 msgid "Background Image"
 msgstr ""
 
-#: admin/class-theme-options.php:892
+#: admin/class-theme-options.php:906
 msgid "Customize background image."
 msgstr ""
 
-#: admin/class-theme-options.php:901 inc/metaboxes/page-options.php:265
+#: admin/class-theme-options.php:915 inc/metaboxes/page-options.php:265
 #: inc/metaboxes/post-options.php:297
 #: inc/metaboxes/wyde_portfolio-options.php:337
 msgid "Background Video"
 msgstr ""
 
-#: admin/class-theme-options.php:902
+#: admin/class-theme-options.php:916
 msgid "Select an MP4 video to display as title background."
 msgstr ""
 
-#: admin/class-theme-options.php:911 inc/metaboxes/page-options.php:272
+#: admin/class-theme-options.php:925 inc/metaboxes/page-options.php:272
 #: inc/metaboxes/page-options.php:366 inc/metaboxes/post-options.php:304
 #: inc/metaboxes/post-options.php:397
 #: inc/metaboxes/wyde_portfolio-options.php:344
@@ -919,541 +931,557 @@ msgstr ""
 msgid "Background Color"
 msgstr ""
 
-#: admin/class-theme-options.php:912
+#: admin/class-theme-options.php:926
 msgid "Select a background color."
 msgstr ""
 
-#: admin/class-theme-options.php:956 inc/metaboxes/page-options.php:321
+#: admin/class-theme-options.php:970 inc/metaboxes/page-options.php:321
 #: inc/metaboxes/post-options.php:352
 #: inc/metaboxes/wyde_portfolio-options.php:392
 msgid "Background Effect"
 msgstr ""
 
-#: admin/class-theme-options.php:957 inc/metaboxes/page-options.php:322
+#: admin/class-theme-options.php:971 inc/metaboxes/page-options.php:322
 #: inc/metaboxes/post-options.php:353
 #: inc/metaboxes/wyde_portfolio-options.php:393
 msgid "Select background scrolling effect."
 msgstr ""
 
-#: admin/class-theme-options.php:961 inc/metaboxes/page-options.php:326
+#: admin/class-theme-options.php:975 inc/metaboxes/page-options.php:326
 #: inc/metaboxes/post-options.php:357
 #: inc/metaboxes/wyde_portfolio-options.php:397
 msgid "Gradient"
 msgstr ""
 
-#: admin/class-theme-options.php:962 inc/metaboxes/page-options.php:328
+#: admin/class-theme-options.php:976 inc/metaboxes/page-options.php:328
 #: inc/metaboxes/post-options.php:359
 #: inc/metaboxes/wyde_portfolio-options.php:399
 msgid "Parallax"
 msgstr ""
 
-#: admin/class-theme-options.php:980
+#: admin/class-theme-options.php:994
 msgid "Page Options"
 msgstr ""
 
-#: admin/class-theme-options.php:981
+#: admin/class-theme-options.php:995
 msgid "Choose default options for page."
 msgstr ""
 
-#: admin/class-theme-options.php:987
+#: admin/class-theme-options.php:1001
 msgid "One Page Website"
 msgstr ""
 
-#: admin/class-theme-options.php:988
+#: admin/class-theme-options.php:1002
 msgid ""
 "Create One Page website, your frontpage will retrieve page content from "
 "primary menu automatically."
 msgstr ""
 
-#: admin/class-theme-options.php:994 admin/class-theme-options.php:1236
+#: admin/class-theme-options.php:1008 admin/class-theme-options.php:1250
 #: comments.php:11 templates/blog/single.php:125
 msgid "Comments"
 msgstr ""
 
-#: admin/class-theme-options.php:995
+#: admin/class-theme-options.php:1009
 msgid "Allow comments on Regular WordPress pages (Boxed Layout)."
 msgstr ""
 
-#: admin/class-theme-options.php:1008 admin/class-theme-options.php:1014
+#: admin/class-theme-options.php:1022 admin/class-theme-options.php:1028
 msgid "Blog"
 msgstr ""
 
-#: admin/class-theme-options.php:1015
+#: admin/class-theme-options.php:1029
 msgid "Customize Posts page that displays your latest posts."
 msgstr ""
 
-#: admin/class-theme-options.php:1021 admin/class-theme-options.php:1335
-#: admin/class-theme-options.php:1537 admin/class-theme-options.php:1721
+#: admin/class-theme-options.php:1035 admin/class-theme-options.php:1349
+#: admin/class-theme-options.php:1565 admin/class-theme-options.php:1749
 msgid "Page Layout"
 msgstr ""
 
-#: admin/class-theme-options.php:1022 admin/class-theme-options.php:1336
-#: admin/class-theme-options.php:1538 admin/class-theme-options.php:1722
+#: admin/class-theme-options.php:1036 admin/class-theme-options.php:1350
+#: admin/class-theme-options.php:1566 admin/class-theme-options.php:1750
 msgid ""
 "Select a page layout, choose 'Boxed' to create a Regular WordPress page, "
 "Wide for creating a Full Width page."
 msgstr ""
 
-#: admin/class-theme-options.php:1024 admin/class-theme-options.php:1338
-#: admin/class-theme-options.php:1540 admin/class-theme-options.php:1724
+#: admin/class-theme-options.php:1038 admin/class-theme-options.php:1352
+#: admin/class-theme-options.php:1568 admin/class-theme-options.php:1752
 #: inc/metaboxes/page-options.php:43
 msgid "Boxed"
 msgstr ""
 
-#: admin/class-theme-options.php:1025 admin/class-theme-options.php:1339
-#: admin/class-theme-options.php:1541 admin/class-theme-options.php:1725
+#: admin/class-theme-options.php:1039 admin/class-theme-options.php:1353
+#: admin/class-theme-options.php:1569 admin/class-theme-options.php:1753
 #: inc/metaboxes/page-options.php:44
 msgid "Wide"
 msgstr ""
 
-#: admin/class-theme-options.php:1033 admin/class-theme-options.php:1150
-#: admin/class-theme-options.php:1347 admin/class-theme-options.php:1733
+#: admin/class-theme-options.php:1047 admin/class-theme-options.php:1164
+#: admin/class-theme-options.php:1361 admin/class-theme-options.php:1761
 #: inc/metaboxes/post-options.php:454 inc/metaboxes/post-options.php:461
 msgid "Sidebar"
 msgstr ""
 
-#: admin/class-theme-options.php:1034 admin/class-theme-options.php:1151
-#: admin/class-theme-options.php:1348 admin/class-theme-options.php:1734
+#: admin/class-theme-options.php:1048 admin/class-theme-options.php:1165
+#: admin/class-theme-options.php:1362 admin/class-theme-options.php:1762
 #: inc/metaboxes/page-options.php:61 inc/metaboxes/post-options.php:469
 msgid "Select sidebar position."
 msgstr ""
 
-#: admin/class-theme-options.php:1046 admin/class-theme-options.php:1360
-#: admin/class-theme-options.php:1746 inc/metaboxes/page-options.php:84
+#: admin/class-theme-options.php:1060 admin/class-theme-options.php:1374
+#: admin/class-theme-options.php:1774 inc/metaboxes/page-options.php:84
 msgid "Sidebar Style"
 msgstr ""
 
-#: admin/class-theme-options.php:1047 admin/class-theme-options.php:1361
-#: admin/class-theme-options.php:1747 inc/metaboxes/page-options.php:85
+#: admin/class-theme-options.php:1061 admin/class-theme-options.php:1375
+#: admin/class-theme-options.php:1775 inc/metaboxes/page-options.php:85
 msgid "Select a sidebar background style."
 msgstr ""
 
-#: admin/class-theme-options.php:1059 admin/class-theme-options.php:1386
+#: admin/class-theme-options.php:1073 admin/class-theme-options.php:1400
 #: inc/shortcodes/wyde-blog-posts.php:24
 msgid "Select blog posts view."
 msgstr ""
 
-#: admin/class-theme-options.php:1070 admin/class-theme-options.php:1074
+#: admin/class-theme-options.php:1084 admin/class-theme-options.php:1088
 msgid "Excerpt"
 msgstr ""
 
-#: admin/class-theme-options.php:1071
+#: admin/class-theme-options.php:1085
 msgid "Choose to display an excerpt or full content on blog posts view."
 msgstr ""
 
-#: admin/class-theme-options.php:1073
+#: admin/class-theme-options.php:1087
 msgid "Full Content"
 msgstr ""
 
-#: admin/class-theme-options.php:1083
+#: admin/class-theme-options.php:1097
 msgid "Limit By"
 msgstr ""
 
-#: admin/class-theme-options.php:1084 inc/shortcodes/wyde-blog-posts.php:53
+#: admin/class-theme-options.php:1098 inc/shortcodes/wyde-blog-posts.php:53
 msgid "Limit the post excerpt length by using number of words or characters."
 msgstr ""
 
-#: admin/class-theme-options.php:1086 inc/shortcodes/wyde-blog-posts.php:50
+#: admin/class-theme-options.php:1100 inc/shortcodes/wyde-blog-posts.php:50
 msgid "Words"
 msgstr ""
 
-#: admin/class-theme-options.php:1087 inc/shortcodes/wyde-blog-posts.php:51
+#: admin/class-theme-options.php:1101 inc/shortcodes/wyde-blog-posts.php:51
 msgid "Characters"
 msgstr ""
 
-#: admin/class-theme-options.php:1096 inc/shortcodes/wyde-blog-posts.php:59
+#: admin/class-theme-options.php:1110 inc/shortcodes/wyde-blog-posts.php:59
 msgid "Excerpt Length"
 msgstr ""
 
-#: admin/class-theme-options.php:1097 inc/shortcodes/wyde-blog-posts.php:61
+#: admin/class-theme-options.php:1111 inc/shortcodes/wyde-blog-posts.php:61
 msgid "Enter the limit of post excerpt length."
 msgstr ""
 
-#: admin/class-theme-options.php:1104 inc/shortcodes/wyde-blog-posts.php:67
+#: admin/class-theme-options.php:1118 inc/shortcodes/wyde-blog-posts.php:67
 #: templates/shortcodes/wyde_info_box.php:87
 msgid "Read More"
 msgstr ""
 
-#: admin/class-theme-options.php:1105 inc/shortcodes/wyde-blog-posts.php:72
+#: admin/class-theme-options.php:1119 inc/shortcodes/wyde-blog-posts.php:72
 msgid "Select read more style to display after the excerpt."
 msgstr ""
 
-#: admin/class-theme-options.php:1107 inc/shortcodes/wyde-blog-posts.php:69
+#: admin/class-theme-options.php:1121 inc/shortcodes/wyde-blog-posts.php:69
 msgid "[...]"
 msgstr ""
 
-#: admin/class-theme-options.php:1108 inc/shortcodes/wyde-blog-posts.php:70
+#: admin/class-theme-options.php:1122 inc/shortcodes/wyde-blog-posts.php:70
 msgid "Link to Full Post"
 msgstr ""
 
-#: admin/class-theme-options.php:1116 admin/class-theme-options.php:1397
-#: admin/class-theme-options.php:1591 admin/class-theme-options.php:1645
-#: admin/class-theme-options.php:1758 inc/shortcodes/wyde-blog-posts.php:77
+#: admin/class-theme-options.php:1130 admin/class-theme-options.php:1411
+#: admin/class-theme-options.php:1619 admin/class-theme-options.php:1673
+#: admin/class-theme-options.php:1786 inc/shortcodes/wyde-blog-posts.php:77
 #: inc/shortcodes/wyde-portfolio-grid.php:111
 msgid "Pagination Type"
 msgstr ""
 
-#: admin/class-theme-options.php:1117 admin/class-theme-options.php:1398
-#: admin/class-theme-options.php:1759
+#: admin/class-theme-options.php:1131 admin/class-theme-options.php:1412
+#: admin/class-theme-options.php:1787
 msgid "Select the pagination type for blog page."
 msgstr ""
 
-#: admin/class-theme-options.php:1119 admin/class-theme-options.php:1400
-#: admin/class-theme-options.php:1648 admin/class-theme-options.php:1761
+#: admin/class-theme-options.php:1133 admin/class-theme-options.php:1414
+#: admin/class-theme-options.php:1676 admin/class-theme-options.php:1789
 #: inc/shortcodes/wyde-blog-posts.php:79
 msgid "Numeric Pagination"
 msgstr ""
 
-#: admin/class-theme-options.php:1120 admin/class-theme-options.php:1401
-#: admin/class-theme-options.php:1594 admin/class-theme-options.php:1649
-#: admin/class-theme-options.php:1762 inc/shortcodes/wyde-blog-posts.php:80
+#: admin/class-theme-options.php:1134 admin/class-theme-options.php:1415
+#: admin/class-theme-options.php:1622 admin/class-theme-options.php:1677
+#: admin/class-theme-options.php:1790 inc/shortcodes/wyde-blog-posts.php:80
 #: inc/shortcodes/wyde-portfolio-grid.php:113
 msgid "Infinite Scroll"
 msgstr ""
 
-#: admin/class-theme-options.php:1121 admin/class-theme-options.php:1402
-#: admin/class-theme-options.php:1650 admin/class-theme-options.php:1763
+#: admin/class-theme-options.php:1135 admin/class-theme-options.php:1416
+#: admin/class-theme-options.php:1678 admin/class-theme-options.php:1791
 #: inc/shortcodes/wyde-blog-posts.php:81
 msgid "Next and Previous"
 msgstr ""
 
-#: admin/class-theme-options.php:1129 admin/class-theme-options.php:1430
+#: admin/class-theme-options.php:1143 admin/class-theme-options.php:1444
 msgid "Placeholder Image"
 msgstr ""
 
-#: admin/class-theme-options.php:1132 admin/class-theme-options.php:1432
+#: admin/class-theme-options.php:1146 admin/class-theme-options.php:1446
 msgid "Select a cover image placeholder."
 msgstr ""
 
-#: admin/class-theme-options.php:1133
+#: admin/class-theme-options.php:1147
 msgid "Recommended size: 960x540 px or larger."
 msgstr ""
 
-#: admin/class-theme-options.php:1143
+#: admin/class-theme-options.php:1157
 msgid "Blog Single Post"
 msgstr ""
 
-#: admin/class-theme-options.php:1144
+#: admin/class-theme-options.php:1158
 msgid "Customize blog single post."
 msgstr ""
 
-#: admin/class-theme-options.php:1162
+#: admin/class-theme-options.php:1176
 msgid "Featured Image Size"
 msgstr ""
 
-#: admin/class-theme-options.php:1163
+#: admin/class-theme-options.php:1177
 msgid "Select blog single post featured image size."
 msgstr ""
 
-#: admin/class-theme-options.php:1165
+#: admin/class-theme-options.php:1179
 msgid "Hide Featured Image"
 msgstr ""
 
-#: admin/class-theme-options.php:1166 admin/class-theme-options.php:1178
-#: admin/class-theme-options.php:1460
+#: admin/class-theme-options.php:1180 admin/class-theme-options.php:1192
+#: admin/class-theme-options.php:1481
 msgid "Large (960x540)"
 msgstr ""
 
-#: admin/class-theme-options.php:1168 admin/class-theme-options.php:1180
-#: admin/class-theme-options.php:1462 inc/class-shortcode.php:123
+#: admin/class-theme-options.php:1182 admin/class-theme-options.php:1194
+#: admin/class-theme-options.php:1483 inc/class-shortcode.php:123
 #: inc/shortcodes/wyde-clients-carousel.php:30
 #: inc/shortcodes/wyde-image-gallery.php:31 inc/shortcodes/wyde-slide.php:45
 msgid "Original"
 msgstr ""
 
-#: admin/class-theme-options.php:1175 admin/class-theme-options.php:1457
+#: admin/class-theme-options.php:1189 admin/class-theme-options.php:1478
 msgid "Lightbox Image Size"
 msgstr ""
 
-#: admin/class-theme-options.php:1176
+#: admin/class-theme-options.php:1190
 msgid "Select lightbox image size."
 msgstr ""
 
-#: admin/class-theme-options.php:1187
+#: admin/class-theme-options.php:1201
 msgid "Post Tags"
 msgstr ""
 
-#: admin/class-theme-options.php:1188
+#: admin/class-theme-options.php:1202
 msgid "Display post tags."
 msgstr ""
 
-#: admin/class-theme-options.php:1194
+#: admin/class-theme-options.php:1208
 msgid "Author Box"
 msgstr ""
 
-#: admin/class-theme-options.php:1195 inc/metaboxes/post-options.php:100
+#: admin/class-theme-options.php:1209 inc/metaboxes/post-options.php:100
 msgid "Display author description box."
 msgstr ""
 
-#: admin/class-theme-options.php:1201 admin/class-theme-options.php:1476
+#: admin/class-theme-options.php:1215 admin/class-theme-options.php:1504
 msgid "Post Navigation"
 msgstr ""
 
-#: admin/class-theme-options.php:1202 admin/class-theme-options.php:1477
+#: admin/class-theme-options.php:1216 admin/class-theme-options.php:1505
 msgid "Display next and previous posts."
 msgstr ""
 
-#: admin/class-theme-options.php:1209 admin/class-theme-options.php:1484
+#: admin/class-theme-options.php:1223 admin/class-theme-options.php:1512
 msgid "Home Button"
 msgstr ""
 
-#: admin/class-theme-options.php:1210
+#: admin/class-theme-options.php:1224
 msgid "Display a \"Home\" button on blog single post."
 msgstr ""
 
-#: admin/class-theme-options.php:1217
+#: admin/class-theme-options.php:1231
 msgid "Blog Home Page"
 msgstr ""
 
-#: admin/class-theme-options.php:1218
+#: admin/class-theme-options.php:1232
 msgid "Select a blog home page."
 msgstr ""
 
-#: admin/class-theme-options.php:1220
+#: admin/class-theme-options.php:1234
 msgid "Default - Assigned Posts Page"
 msgstr ""
 
-#: admin/class-theme-options.php:1229
+#: admin/class-theme-options.php:1243
 msgid "Blog Home Page URL"
 msgstr ""
 
-#: admin/class-theme-options.php:1230
+#: admin/class-theme-options.php:1244
 msgid "Home page URL for the \"Home\" button on blog single post."
 msgstr ""
 
-#: admin/class-theme-options.php:1237
+#: admin/class-theme-options.php:1251
 msgid "Display comments box."
 msgstr ""
 
-#: admin/class-theme-options.php:1243 admin/class-theme-options.php:1499
+#: admin/class-theme-options.php:1257 admin/class-theme-options.php:1527
 #: inc/metaboxes/post-options.php:111
 #: inc/metaboxes/wyde_portfolio-options.php:39
 msgid "Related Posts"
 msgstr ""
 
-#: admin/class-theme-options.php:1244 admin/class-theme-options.php:1500
+#: admin/class-theme-options.php:1258 admin/class-theme-options.php:1528
 #: inc/metaboxes/post-options.php:112
 #: inc/metaboxes/wyde_portfolio-options.php:40
 msgid "Display related posts."
 msgstr ""
 
-#: admin/class-theme-options.php:1251 admin/class-theme-options.php:1507
+#: admin/class-theme-options.php:1265 admin/class-theme-options.php:1535
 msgid "Related Posts Title"
 msgstr ""
 
-#: admin/class-theme-options.php:1252 admin/class-theme-options.php:1508
+#: admin/class-theme-options.php:1266 admin/class-theme-options.php:1536
 msgid "The title of related posts box."
 msgstr ""
 
-#: admin/class-theme-options.php:1259 admin/class-theme-options.php:1515
+#: admin/class-theme-options.php:1273 admin/class-theme-options.php:1543
 msgid "Number of related posts"
 msgstr ""
 
-#: admin/class-theme-options.php:1260 admin/class-theme-options.php:1516
+#: admin/class-theme-options.php:1274 admin/class-theme-options.php:1544
 msgid "Select the number of posts to show in related posts."
 msgstr ""
 
-#: admin/class-theme-options.php:1279
+#: admin/class-theme-options.php:1293
 msgid "Blog Meta"
 msgstr ""
 
-#: admin/class-theme-options.php:1280
+#: admin/class-theme-options.php:1294
 msgid "Customize blog meta data options."
 msgstr ""
 
-#: admin/class-theme-options.php:1286
+#: admin/class-theme-options.php:1300
 msgid "Post Date"
 msgstr ""
 
-#: admin/class-theme-options.php:1287
+#: admin/class-theme-options.php:1301
 msgid "Display blog post date."
 msgstr ""
 
-#: admin/class-theme-options.php:1293
+#: admin/class-theme-options.php:1307
 msgid "Author Name"
 msgstr ""
 
-#: admin/class-theme-options.php:1294
+#: admin/class-theme-options.php:1308
 msgid "Display blog author meta data."
 msgstr ""
 
-#: admin/class-theme-options.php:1300
+#: admin/class-theme-options.php:1314
 msgid "Category"
 msgstr ""
 
-#: admin/class-theme-options.php:1301
+#: admin/class-theme-options.php:1315
 msgid "Display blog meta category."
 msgstr ""
 
-#: admin/class-theme-options.php:1307 templates/blog/single.php:125
+#: admin/class-theme-options.php:1321 templates/blog/single.php:125
 msgid "Comment"
 msgstr ""
 
-#: admin/class-theme-options.php:1308
+#: admin/class-theme-options.php:1322
 msgid "Display blog meta comment."
 msgstr ""
 
-#: admin/class-theme-options.php:1314
+#: admin/class-theme-options.php:1328
 msgid "Social Sharing Icons"
 msgstr ""
 
-#: admin/class-theme-options.php:1315
+#: admin/class-theme-options.php:1329
 msgid "Display blog social sharing icons."
 msgstr ""
 
-#: admin/class-theme-options.php:1321
+#: admin/class-theme-options.php:1335
 msgid "Blog Archive/Category"
 msgstr ""
 
-#: admin/class-theme-options.php:1322
+#: admin/class-theme-options.php:1336
 msgid "Customize blog archive/category page and author page."
 msgstr ""
 
-#: admin/class-theme-options.php:1329 admin/class-theme-options.php:1531
+#: admin/class-theme-options.php:1343 admin/class-theme-options.php:1559
 msgid "Turn on to show the page title area on archive page."
 msgstr ""
 
-#: admin/class-theme-options.php:1372 admin/class-theme-options.php:1549
+#: admin/class-theme-options.php:1386 admin/class-theme-options.php:1577
 msgid "Page Background"
 msgstr ""
 
-#: admin/class-theme-options.php:1373
+#: admin/class-theme-options.php:1387
 msgid "Set blog archive page background."
 msgstr ""
 
-#: admin/class-theme-options.php:1416
+#: admin/class-theme-options.php:1430
 #: inc/metaboxes/wyde_portfolio-options.php:11
 msgid "Portfolio"
 msgstr ""
 
-#: admin/class-theme-options.php:1422
+#: admin/class-theme-options.php:1436
 msgid "Portfolio Options"
 msgstr ""
 
-#: admin/class-theme-options.php:1423
+#: admin/class-theme-options.php:1437
 msgid "Customize the portfolio options."
 msgstr ""
 
-#: admin/class-theme-options.php:1433
+#: admin/class-theme-options.php:1447
 msgid "Recommended size: 640x640 px or larger."
 msgstr ""
 
-#: admin/class-theme-options.php:1443
+#: admin/class-theme-options.php:1457
 msgid "Portfolio Single Post"
 msgstr ""
 
-#: admin/class-theme-options.php:1444
+#: admin/class-theme-options.php:1458
 msgid "Customize the portfolio single post."
 msgstr ""
 
-#: admin/class-theme-options.php:1450
+#: admin/class-theme-options.php:1464
 msgid "Portfolio Slug"
 msgstr ""
 
-#: admin/class-theme-options.php:1451
+#: admin/class-theme-options.php:1465
 msgid ""
 "Change/Rewrite the permalink when you use the permalink type as %postname%."
 msgstr ""
 
-#: admin/class-theme-options.php:1458
+#: admin/class-theme-options.php:1471
+msgid "Display Featured Image"
+msgstr ""
+
+#: admin/class-theme-options.php:1472
+msgid "Turn on to display featured image on portfolio single post."
+msgstr ""
+
+#: admin/class-theme-options.php:1479
 msgid "Select portfolio lightbox image size."
 msgstr ""
 
-#: admin/class-theme-options.php:1469
+#: admin/class-theme-options.php:1490
 msgid "Publish Date"
 msgstr ""
 
-#: admin/class-theme-options.php:1470
+#: admin/class-theme-options.php:1491
 msgid "Display portfolio publish date."
 msgstr ""
 
-#: admin/class-theme-options.php:1485
+#: admin/class-theme-options.php:1497
+msgid "Social Share Buttons"
+msgstr ""
+
+#: admin/class-theme-options.php:1498
+msgid "Display social media share buttons on the portfolio single post."
+msgstr ""
+
+#: admin/class-theme-options.php:1513
 msgid "Display a \"Home\" button on portfolio single post."
 msgstr ""
 
-#: admin/class-theme-options.php:1492
+#: admin/class-theme-options.php:1520
 msgid "Portfolio Home Page"
 msgstr ""
 
-#: admin/class-theme-options.php:1493
+#: admin/class-theme-options.php:1521
 msgid "Home page URL for the \"Home\" button on portfolio single post."
 msgstr ""
 
-#: admin/class-theme-options.php:1523
+#: admin/class-theme-options.php:1551
 msgid "Portfolio Archive"
 msgstr ""
 
-#: admin/class-theme-options.php:1524
+#: admin/class-theme-options.php:1552
 msgid "Customize the portfolio archive pages (Category, Skill and Tag)."
 msgstr ""
 
-#: admin/class-theme-options.php:1550
+#: admin/class-theme-options.php:1578
 msgid "Set portfolio archive page background."
 msgstr ""
 
-#: admin/class-theme-options.php:1561
+#: admin/class-theme-options.php:1589
 msgid "Select a portfolio layout for archive pages."
 msgstr ""
 
-#: admin/class-theme-options.php:1563 inc/shortcodes/wyde-image-gallery.php:40
+#: admin/class-theme-options.php:1591 inc/shortcodes/wyde-image-gallery.php:40
 #: inc/shortcodes/wyde-portfolio-grid.php:33
 msgid "Grid (Without Space)"
 msgstr ""
 
-#: admin/class-theme-options.php:1564 inc/shortcodes/wyde-image-gallery.php:41
+#: admin/class-theme-options.php:1592 inc/shortcodes/wyde-image-gallery.php:41
 #: inc/shortcodes/wyde-portfolio-grid.php:34
 msgid "Grid (With Space)"
 msgstr ""
 
-#: admin/class-theme-options.php:1565 inc/shortcodes/wyde-portfolio-grid.php:35
+#: admin/class-theme-options.php:1593 inc/shortcodes/wyde-portfolio-grid.php:35
 msgid "Photoset"
 msgstr ""
 
-#: admin/class-theme-options.php:1566 inc/shortcodes/wyde-blog-posts.php:21
+#: admin/class-theme-options.php:1594 inc/shortcodes/wyde-blog-posts.php:21
 #: inc/shortcodes/wyde-image-gallery.php:42
 #: inc/shortcodes/wyde-portfolio-grid.php:36
 msgid "Masonry"
 msgstr ""
 
-#: admin/class-theme-options.php:1567 inc/shortcodes/wyde-blog-posts.php:22
+#: admin/class-theme-options.php:1595 inc/shortcodes/wyde-blog-posts.php:22
 #: inc/shortcodes/wyde-image-gallery.php:71
 #: inc/shortcodes/wyde-portfolio-grid.php:37
 #: inc/shortcodes/wyde-portfolio-grid.php:69
 msgid "Overlap"
 msgstr ""
 
-#: admin/class-theme-options.php:1578 inc/shortcodes/wyde-image-gallery.php:50
+#: admin/class-theme-options.php:1606 inc/shortcodes/wyde-image-gallery.php:50
 #: inc/shortcodes/wyde-portfolio-grid.php:44
 msgid "Columns"
 msgstr ""
 
-#: admin/class-theme-options.php:1579 inc/shortcodes/wyde-image-gallery.php:60
+#: admin/class-theme-options.php:1607 inc/shortcodes/wyde-image-gallery.php:60
 #: inc/shortcodes/wyde-portfolio-grid.php:51
 msgid "Select the number of grid columns."
 msgstr ""
 
-#: admin/class-theme-options.php:1581
+#: admin/class-theme-options.php:1609
 msgid "2 Columns"
 msgstr ""
 
-#: admin/class-theme-options.php:1582
+#: admin/class-theme-options.php:1610
 msgid "3 Columns"
 msgstr ""
 
-#: admin/class-theme-options.php:1583
+#: admin/class-theme-options.php:1611
 msgid "4 Columns"
 msgstr ""
 
-#: admin/class-theme-options.php:1592
+#: admin/class-theme-options.php:1620
 msgid "Select the pagination type for portfolio archive pages."
 msgstr ""
 
-#: admin/class-theme-options.php:1595
+#: admin/class-theme-options.php:1623
 #: inc/shortcodes/wyde-portfolio-grid.php:114
 msgid "Show More Button"
 msgstr ""
 
-#: admin/class-theme-options.php:1596 inc/metaboxes/page-options.php:112
+#: admin/class-theme-options.php:1624 inc/metaboxes/page-options.php:112
 #: inc/metaboxes/page-options.php:159 inc/metaboxes/page-options.php:429
 #: inc/metaboxes/page-options.php:440 inc/metaboxes/post-options.php:105
 #: inc/metaboxes/post-options.php:117 inc/metaboxes/post-options.php:138
@@ -1469,357 +1497,345 @@ msgstr ""
 msgid "Hide"
 msgstr ""
 
-#: admin/class-theme-options.php:1608
+#: admin/class-theme-options.php:1636
 msgid "WooCommerce"
 msgstr ""
 
-#: admin/class-theme-options.php:1614
+#: admin/class-theme-options.php:1642
 msgid "Shop Page"
 msgstr ""
 
-#: admin/class-theme-options.php:1615
+#: admin/class-theme-options.php:1643
 msgid "Customize shop page."
 msgstr ""
 
-#: admin/class-theme-options.php:1621
+#: admin/class-theme-options.php:1649
 msgid "Number of Products per Page"
 msgstr ""
 
-#: admin/class-theme-options.php:1622
+#: admin/class-theme-options.php:1650
 msgid "Enter the number of products per page."
 msgstr ""
 
-#: admin/class-theme-options.php:1630 admin/class-theme-options.php:1695
+#: admin/class-theme-options.php:1658 admin/class-theme-options.php:1723
 msgid "Number of Columns"
 msgstr ""
 
-#: admin/class-theme-options.php:1631 admin/class-theme-options.php:1696
+#: admin/class-theme-options.php:1659 admin/class-theme-options.php:1724
 msgid "Select the number of columns."
 msgstr ""
 
-#: admin/class-theme-options.php:1646
+#: admin/class-theme-options.php:1674
 msgid "Select the pagination type for shop page."
 msgstr ""
 
-#: admin/class-theme-options.php:1657
+#: admin/class-theme-options.php:1685
 msgid "Single Product"
 msgstr ""
 
-#: admin/class-theme-options.php:1658
+#: admin/class-theme-options.php:1686
 msgid "Customize shop single product."
 msgstr ""
 
-#: admin/class-theme-options.php:1664
+#: admin/class-theme-options.php:1692
 msgid "Shop Single Sidebar"
 msgstr ""
 
-#: admin/class-theme-options.php:1665
+#: admin/class-theme-options.php:1693
 msgid "Select shop single product sidebar position."
 msgstr ""
 
-#: admin/class-theme-options.php:1676
+#: admin/class-theme-options.php:1704
 msgid "Number of Related Products"
 msgstr ""
 
-#: admin/class-theme-options.php:1677
+#: admin/class-theme-options.php:1705
 msgid "Select the number of related products."
 msgstr ""
 
-#: admin/class-theme-options.php:1715 page-title.php:189
+#: admin/class-theme-options.php:1743 page-title.php:189
 #: templates/navigation/side-nav.php:33
 msgid "Search"
 msgstr ""
 
-#: admin/class-theme-options.php:1770
+#: admin/class-theme-options.php:1798
 msgid "Show Featured Image"
 msgstr ""
 
-#: admin/class-theme-options.php:1771
+#: admin/class-theme-options.php:1799
 msgid "Display featured images in search results."
 msgstr ""
 
-#: admin/class-theme-options.php:1777
+#: admin/class-theme-options.php:1805
 msgid "Show Post Date"
 msgstr ""
 
-#: admin/class-theme-options.php:1778
+#: admin/class-theme-options.php:1806
 msgid "Display post date in search results."
 msgstr ""
 
-#: admin/class-theme-options.php:1784
+#: admin/class-theme-options.php:1812
 msgid "Show Author"
 msgstr ""
 
-#: admin/class-theme-options.php:1785
+#: admin/class-theme-options.php:1813
 msgid "Display post author in search results."
 msgstr ""
 
-#: admin/class-theme-options.php:1791
+#: admin/class-theme-options.php:1819
 msgid "Ajax Search"
 msgstr ""
 
-#: admin/class-theme-options.php:1792
+#: admin/class-theme-options.php:1820
 msgid "Enable ajax auto suggest search."
 msgstr ""
 
-#: admin/class-theme-options.php:1804
+#: admin/class-theme-options.php:1832
 msgid "Post Types"
 msgstr ""
 
-#: admin/class-theme-options.php:1805
+#: admin/class-theme-options.php:1833
 msgid "Select post types for ajax auto suggest search."
 msgstr ""
 
-#: admin/class-theme-options.php:1817
+#: admin/class-theme-options.php:1845
 msgid "Number of Suggestion Items."
 msgstr ""
 
-#: admin/class-theme-options.php:1818
+#: admin/class-theme-options.php:1846
 msgid "Select number of search suggestion items per post type."
 msgstr ""
 
-#: admin/class-theme-options.php:1842
+#: admin/class-theme-options.php:1870
 msgid "AJAX Page"
 msgstr ""
 
-#: admin/class-theme-options.php:1848
+#: admin/class-theme-options.php:1876
 msgid "AJAX Options"
 msgstr ""
 
-#: admin/class-theme-options.php:1849
+#: admin/class-theme-options.php:1877
 msgid "Turn on or off the AJAX page features."
 msgstr ""
 
-#: admin/class-theme-options.php:1855
+#: admin/class-theme-options.php:1883
 msgid "Ajax Page"
 msgstr ""
 
-#: admin/class-theme-options.php:1856
+#: admin/class-theme-options.php:1884
 msgid "Enable ajax page transitions."
 msgstr ""
 
-#: admin/class-theme-options.php:1863
+#: admin/class-theme-options.php:1891
 msgid "Transitions"
 msgstr ""
 
-#: admin/class-theme-options.php:1864
+#: admin/class-theme-options.php:1892
 msgid "Select a page transition effect."
 msgstr ""
 
-#: admin/class-theme-options.php:1866 inc/shortcodes/wyde-image-gallery.php:104
+#: admin/class-theme-options.php:1894 inc/shortcodes/wyde-image-gallery.php:104
 #: inc/shortcodes/wyde-slider.php:24
 #: inc/shortcodes/wyde-testimonials-slider.php:53
 msgid "Fade"
 msgstr ""
 
-#: admin/class-theme-options.php:1867
+#: admin/class-theme-options.php:1895
 msgid "Slide Toggle"
 msgstr ""
 
-#: admin/class-theme-options.php:1868
+#: admin/class-theme-options.php:1896
 msgid "Slide to Left"
 msgstr ""
 
-#: admin/class-theme-options.php:1869
+#: admin/class-theme-options.php:1897
 msgid "Slide to Right"
 msgstr ""
 
-#: admin/class-theme-options.php:1870
+#: admin/class-theme-options.php:1898
 msgid "Slide Up"
 msgstr ""
 
-#: admin/class-theme-options.php:1871
+#: admin/class-theme-options.php:1899
 msgid "Slide Down"
 msgstr ""
 
-#: admin/class-theme-options.php:1879
+#: admin/class-theme-options.php:1907
 msgid "Exclude URLs"
 msgstr ""
 
-#: admin/class-theme-options.php:1880
+#: admin/class-theme-options.php:1908
 msgid ""
 "Excludes the specific links from AJAX Page Loader. E.g. /shop/, /cart/, /"
 "checkout/, etc."
 msgstr ""
 
-#: admin/class-theme-options.php:1911
+#: admin/class-theme-options.php:1939
 msgid "Social Media"
 msgstr ""
 
-#: admin/class-theme-options.php:1921
+#: admin/class-theme-options.php:1949
 msgid "Typography"
 msgstr ""
 
-#: admin/class-theme-options.php:1922
+#: admin/class-theme-options.php:1950
 msgid "Customize font options for your site."
 msgstr ""
 
-#: admin/class-theme-options.php:1927
+#: admin/class-theme-options.php:1955
 msgid "Body"
 msgstr ""
 
-#: admin/class-theme-options.php:1928
+#: admin/class-theme-options.php:1956
 msgid "Font options for main body text."
 msgstr ""
 
-#: admin/class-theme-options.php:1948
+#: admin/class-theme-options.php:1976
 msgid "Primary Menu"
 msgstr ""
 
-#: admin/class-theme-options.php:1949
+#: admin/class-theme-options.php:1977
 msgid "Font options for primary navigation."
 msgstr ""
 
-#: admin/class-theme-options.php:1972
+#: admin/class-theme-options.php:2000
 msgid "Buttons and Link Buttons"
 msgstr ""
 
-#: admin/class-theme-options.php:1973
+#: admin/class-theme-options.php:2001
 msgid "Font options for buttons and link buttons."
 msgstr ""
 
-#: admin/class-theme-options.php:1996
+#: admin/class-theme-options.php:2024
 msgid "H1"
 msgstr ""
 
-#: admin/class-theme-options.php:1997
+#: admin/class-theme-options.php:2025
 msgid "Font options for heading 1."
 msgstr ""
 
-#: admin/class-theme-options.php:2018
+#: admin/class-theme-options.php:2046
 msgid "H2"
 msgstr ""
 
-#: admin/class-theme-options.php:2019
+#: admin/class-theme-options.php:2047
 msgid "Font options for heading 2."
 msgstr ""
 
-#: admin/class-theme-options.php:2040
+#: admin/class-theme-options.php:2068
 msgid "H3"
 msgstr ""
 
-#: admin/class-theme-options.php:2041
+#: admin/class-theme-options.php:2069
 msgid "Font options for heading 3."
 msgstr ""
 
-#: admin/class-theme-options.php:2062
+#: admin/class-theme-options.php:2090
 msgid "H4"
 msgstr ""
 
-#: admin/class-theme-options.php:2063
+#: admin/class-theme-options.php:2091
 msgid "Font options for heading 4."
 msgstr ""
 
-#: admin/class-theme-options.php:2087
+#: admin/class-theme-options.php:2115
 msgid "H5"
 msgstr ""
 
-#: admin/class-theme-options.php:2088
+#: admin/class-theme-options.php:2116
 msgid "Font options for heading 5."
 msgstr ""
 
-#: admin/class-theme-options.php:2112
+#: admin/class-theme-options.php:2140
 msgid "H6"
 msgstr ""
 
-#: admin/class-theme-options.php:2113
+#: admin/class-theme-options.php:2141
 msgid "Font options for heading 6 and blockquote."
 msgstr ""
 
-#: admin/class-theme-options.php:2143
+#: admin/class-theme-options.php:2171
 msgid "Google Maps"
 msgstr ""
 
-#: admin/class-theme-options.php:2149
-msgid "Google Maps Options"
-msgstr ""
-
-#: admin/class-theme-options.php:2150
-msgid ""
-"This is now an optional but will be required in the future as you can see in "
-"<a href=\"https://developers.google.com/maps/documentation/javascript/get-"
-"api-key\" target=\"_blank\">Google Maps Documentation</a> (All Google Maps "
-"JavaScript API applications require authentication)."
-msgstr ""
-
-#: admin/class-theme-options.php:2156
+#: admin/class-theme-options.php:2177
 msgid "Google Maps API Key"
 msgstr ""
 
-#: admin/class-theme-options.php:2157
+#: admin/class-theme-options.php:2178
 msgid ""
 "Enter your Google Maps API key, <a href=\"https://developers.google.com/maps/"
 "documentation/javascript/get-api-key#key\" target=\"_blank\">Get an API key</"
 "a>"
 msgstr ""
 
-#: admin/class-theme-options.php:2168
+#: admin/class-theme-options.php:2189
 msgid "Advanced"
 msgstr ""
 
-#: admin/class-theme-options.php:2174
+#: admin/class-theme-options.php:2195
 msgid "Head Content"
 msgstr ""
 
-#: admin/class-theme-options.php:2175
+#: admin/class-theme-options.php:2196
 msgid ""
 "Enter HTML/JavaScript/StyleSheet. The content will be added into the head "
 "tag. You can add Google Verification code and custom Meta HTTP Content here."
 msgstr ""
 
-#: admin/class-theme-options.php:2182
+#: admin/class-theme-options.php:2203
 msgid "Body Content"
 msgstr ""
 
-#: admin/class-theme-options.php:2183
+#: admin/class-theme-options.php:2204
 msgid ""
 "Enter HTML/JavaScript/StyleSheet. The content will be added into the footer "
 "of all pages. You can add Google Analytics code and custom JavaScript here."
 msgstr ""
 
-#: admin/class-theme-options.php:2194
+#: admin/class-theme-options.php:2215
 msgid "Import / Export"
 msgstr ""
 
-#: admin/class-theme-options.php:2201
+#: admin/class-theme-options.php:2222
 msgid "Import and Export"
 msgstr ""
 
-#: admin/class-theme-options.php:2202
+#: admin/class-theme-options.php:2223
 msgid "Import and Export your Theme options."
 msgstr ""
 
-#: admin/class-theme-options.php:2216
+#: admin/class-theme-options.php:2237
 msgid "Customize"
 msgstr ""
 
-#: admin/class-theme-options.php:2231 templates/blog/content-masonry.php:149
+#: admin/class-theme-options.php:2252 templates/blog/content-masonry.php:149
 #: templates/blog/content-overlap.php:137 templates/blog/content.php:137
 #: templates/blog/single.php:116
 msgid "By"
 msgstr ""
 
-#: admin/class-theme-options.php:2232
+#: admin/class-theme-options.php:2253 inc/class-tgm-plugin-activation.php:2646
 msgid "Version"
 msgstr ""
 
-#: admin/class-theme-options.php:2233
+#: admin/class-theme-options.php:2254
 msgid "Tags"
 msgstr ""
 
-#: admin/class-theme-options.php:2237
+#: admin/class-theme-options.php:2258
 msgid "This child theme requires its parent theme"
 msgstr ""
 
-#: admin/class-theme-options.php:2251
+#: admin/class-theme-options.php:2272
 msgid "Theme Information"
 msgstr ""
 
-#: admin/class-theme-options.php:2252
+#: admin/class-theme-options.php:2273
 msgid "For more information and features about this theme, please visit"
 msgstr ""
 
-#: admin/class-theme-options.php:2272 admin/class-theme-options.php:2274
+#: admin/class-theme-options.php:2293 admin/class-theme-options.php:2295
 msgid "Theme Options"
 msgstr ""
 
@@ -1843,17 +1859,17 @@ msgstr ""
 msgid "Name"
 msgstr ""
 
-#: comments.php:48 comments.php:50
+#: comments.php:48 comments.php:50 inc/class-tgm-plugin-activation.php:2366
 msgid "Required"
 msgstr ""
 
-#: comments.php:50 templates/shortcodes/wyde_team_slider.php:83
+#: comments.php:50 templates/shortcodes/wyde_team_slider.php:86
 msgid "Email"
 msgstr ""
 
 #: comments.php:52 inc/metaboxes/wyde_team_member-options.php:50
 #: inc/metaboxes/wyde_testimonial-options.php:32
-#: templates/shortcodes/wyde_team_slider.php:87
+#: templates/shortcodes/wyde_team_slider.php:90
 msgid "Website"
 msgstr ""
 
@@ -1914,11 +1930,11 @@ msgstr ""
 msgid "Shop Sidebar"
 msgstr ""
 
-#: functions.php:558
+#: functions.php:569
 msgid "Install Bundled Plugins"
 msgstr ""
 
-#: inc/class-metabox.php:65
+#: inc/class-metabox.php:64
 msgid "Overlap Options"
 msgstr ""
 
@@ -2122,49 +2138,49 @@ msgid "New window"
 msgstr ""
 
 #: inc/class-shortcode.php:209 inc/shortcodes/wyde-blog-posts.php:89
-#: inc/shortcodes/wyde-clients-carousel.php:69
+#: inc/shortcodes/wyde-clients-carousel.php:81
 #: inc/shortcodes/wyde-portfolio-grid.php:122
-#: inc/shortcodes/wyde-testimonials-slider.php:78
+#: inc/shortcodes/wyde-testimonials-slider.php:90
 msgid "Animation"
 msgstr ""
 
 #: inc/class-shortcode.php:210 inc/shortcodes/wyde-blog-posts.php:90
-#: inc/shortcodes/wyde-clients-carousel.php:70
+#: inc/shortcodes/wyde-clients-carousel.php:82
 #: inc/shortcodes/wyde-portfolio-grid.php:123
-#: inc/shortcodes/wyde-testimonials-slider.php:79
+#: inc/shortcodes/wyde-testimonials-slider.php:91
 msgid "Select a CSS3 Animation that applies to this element."
 msgstr ""
 
 #: inc/class-shortcode.php:215 inc/shortcodes/wyde-blog-posts.php:95
-#: inc/shortcodes/wyde-clients-carousel.php:75
+#: inc/shortcodes/wyde-clients-carousel.php:87
 #: inc/shortcodes/wyde-portfolio-grid.php:128
-#: inc/shortcodes/wyde-testimonials-slider.php:84
+#: inc/shortcodes/wyde-testimonials-slider.php:96
 msgid "Animation Delay"
 msgstr ""
 
 #: inc/class-shortcode.php:216 inc/shortcodes/wyde-blog-posts.php:96
-#: inc/shortcodes/wyde-clients-carousel.php:76
+#: inc/shortcodes/wyde-clients-carousel.php:88
 #: inc/shortcodes/wyde-portfolio-grid.php:129
-#: inc/shortcodes/wyde-testimonials-slider.php:85
+#: inc/shortcodes/wyde-testimonials-slider.php:97
 msgid ""
 "Defines when the animation will start (in seconds). Example: 0.5, 1, 2, ..."
 msgstr ""
 
 #: inc/class-shortcode.php:225 inc/shortcodes/wyde-blog-posts.php:105
-#: inc/shortcodes/wyde-clients-carousel.php:85
-#: inc/shortcodes/wyde-image-gallery.php:167
+#: inc/shortcodes/wyde-clients-carousel.php:97
+#: inc/shortcodes/wyde-image-gallery.php:179
 #: inc/shortcodes/wyde-portfolio-grid.php:138 inc/shortcodes/wyde-slide.php:57
-#: inc/shortcodes/wyde-slider.php:37
-#: inc/shortcodes/wyde-testimonials-slider.php:94
+#: inc/shortcodes/wyde-slider.php:49
+#: inc/shortcodes/wyde-testimonials-slider.php:106
 msgid "Extra CSS Class"
 msgstr ""
 
 #: inc/class-shortcode.php:226 inc/shortcodes/wyde-blog-posts.php:106
-#: inc/shortcodes/wyde-clients-carousel.php:86
-#: inc/shortcodes/wyde-image-gallery.php:168
+#: inc/shortcodes/wyde-clients-carousel.php:98
+#: inc/shortcodes/wyde-image-gallery.php:180
 #: inc/shortcodes/wyde-portfolio-grid.php:139 inc/shortcodes/wyde-slide.php:58
-#: inc/shortcodes/wyde-slider.php:38
-#: inc/shortcodes/wyde-testimonials-slider.php:95
+#: inc/shortcodes/wyde-slider.php:50
+#: inc/shortcodes/wyde-testimonials-slider.php:107
 msgid ""
 "Style particular content element differently - add a class name and refer to "
 "it in custom CSS."
@@ -2198,75 +2214,376 @@ msgstr ""
 msgid "Select an icon."
 msgstr ""
 
+#: inc/class-tgm-plugin-activation.php:334
+msgid "Install Required Plugins"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:335
+msgid "Install Plugins"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:337
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:339
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:340
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:392
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:393
+#: inc/class-tgm-plugin-activation.php:920
+#: inc/class-tgm-plugin-activation.php:2626
+#: inc/class-tgm-plugin-activation.php:3673
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:394
+#: inc/class-tgm-plugin-activation.php:3252
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:395
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:397
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:399
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:401
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:402
+msgid "Dismiss this notice"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:403
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:404
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:608
+msgid "Update Required"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:725
+msgid "Set the parent_slug config variable instead."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1027
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1027
+#: inc/class-tgm-plugin-activation.php:1030
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:1030
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2075
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2369
+msgid "Recommended"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2385
+msgid "WordPress Repository"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2388
+msgid "External Source"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2391
+msgid "Pre-Packaged"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2408
+msgid "Not Installed"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2412
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2414
+msgid "Active"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2420
+msgid "Required Update not Available"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2423
+msgid "Requires Update"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2426
+msgid "Update recommended"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2583
+msgid "Installed version:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2591
+msgid "Minimum required version:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2603
+msgid "Available version:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2626
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2640
+msgid "Plugin"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2641
+msgid "Source"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2642
+msgid "Type"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2647
+msgid "Status"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2696
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2701
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2707
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2777
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2810
+msgid "Install"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2816
+msgid "Update"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2819
+msgid "Activate"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2850
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2852
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2893
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:2895
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3001
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3027
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3251
+msgid "Plugin activation failed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3591
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3594
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3596
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3600
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3602
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3602
+#: inc/class-tgm-plugin-activation.php:3610
+msgid "Show Details"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3602
+#: inc/class-tgm-plugin-activation.php:3610
+msgid "Hide Details"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3603
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3605
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3608
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3610
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3611
+msgid "All installations have been completed."
+msgstr ""
+
+#: inc/class-tgm-plugin-activation.php:3613
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
 #: inc/class-walker-nav.php:125 inc/class-walker-nav.php:183
 msgid "Back"
 msgstr ""
 
-#: inc/class-woocommerce-template.php:88
+#: inc/class-woocommerce-template.php:86
 msgid "Out of stock"
 msgstr ""
 
-#: inc/class-woocommerce-template.php:133
+#: inc/class-woocommerce-template.php:131
 msgid "Shop"
 msgstr ""
 
-#: inc/class-woocommerce-template.php:312
+#: inc/class-woocommerce-template.php:304
 msgid "Account"
 msgstr ""
 
-#: inc/class-woocommerce-template.php:314
+#: inc/class-woocommerce-template.php:306
 msgid "Sign out"
 msgstr ""
 
-#: inc/class-woocommerce-template.php:321
+#: inc/class-woocommerce-template.php:313
 msgid "Sign in"
 msgstr ""
 
-#: inc/class-woocommerce-template.php:371 woocommerce/cart/cart.php:104
+#: inc/class-woocommerce-template.php:363 woocommerce/cart/cart.php:104
 msgid "Remove this item"
 msgstr ""
 
-#: inc/class-woocommerce-template.php:393
+#: inc/class-woocommerce-template.php:385
 msgid "Your cart is empty."
 msgstr ""
 
-#: inc/class-woocommerce-template.php:415 woocommerce/cart/cart-totals.php:20
+#: inc/class-woocommerce-template.php:407 woocommerce/cart/cart-totals.php:20
 msgid "Subtotal"
 msgstr ""
 
-#: inc/class-woocommerce-template.php:418
+#: inc/class-woocommerce-template.php:410
 msgid "View Cart"
 msgstr ""
 
-#: inc/class-woocommerce-template.php:420
+#: inc/class-woocommerce-template.php:412
 msgid "Checkout"
 msgstr ""
 
-#: inc/class-woocommerce-template.php:438
+#: inc/class-woocommerce-template.php:430
 msgid "My Cart"
 msgstr ""
 
-#: inc/custom-functions.php:738 templates/blog/content.php:166
+#: inc/custom-functions.php:749 templates/blog/content.php:166
 msgid "Continue reading"
 msgstr ""
 
-#: inc/custom-functions.php:883
+#: inc/custom-functions.php:894
 msgid "Edit"
 msgstr ""
 
-#: inc/custom-functions.php:883
+#: inc/custom-functions.php:894
 msgid "Reply"
 msgstr ""
 
-#: inc/custom-functions.php:887
+#: inc/custom-functions.php:898
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/custom-functions.php:932
+#: inc/custom-functions.php:943
 msgid "Newer Entries"
 msgstr ""
 
-#: inc/custom-functions.php:935
+#: inc/custom-functions.php:946
 msgid "Older Entries"
 msgstr ""
 
@@ -2825,18 +3142,30 @@ msgid "Auto Play"
 msgstr ""
 
 #: inc/shortcodes/wyde-clients-carousel.php:58
-#: inc/shortcodes/wyde-image-gallery.php:148 inc/shortcodes/wyde-slider.php:32
+#: inc/shortcodes/wyde-image-gallery.php:148
 #: inc/shortcodes/wyde-testimonials-slider.php:73
 msgid "Auto play slide."
 msgstr ""
 
 #: inc/shortcodes/wyde-clients-carousel.php:63
-#: inc/shortcodes/wyde-image-gallery.php:157
+#: inc/shortcodes/wyde-image-gallery.php:157 inc/shortcodes/wyde-slider.php:37
+#: inc/shortcodes/wyde-testimonials-slider.php:78
+msgid "Speed"
+msgstr ""
+
+#: inc/shortcodes/wyde-clients-carousel.php:66
+#: inc/shortcodes/wyde-image-gallery.php:160 inc/shortcodes/wyde-slider.php:40
+#: inc/shortcodes/wyde-testimonials-slider.php:81
+msgid "The amount of time between each slideshow interval (in seconds)."
+msgstr ""
+
+#: inc/shortcodes/wyde-clients-carousel.php:75
+#: inc/shortcodes/wyde-image-gallery.php:169
 msgid "Loop"
 msgstr ""
 
-#: inc/shortcodes/wyde-clients-carousel.php:64
-#: inc/shortcodes/wyde-image-gallery.php:158
+#: inc/shortcodes/wyde-clients-carousel.php:76
+#: inc/shortcodes/wyde-image-gallery.php:170
 msgid "Inifnity loop. Duplicate last and first items to get loop illusion."
 msgstr ""
 
@@ -2998,11 +3327,15 @@ msgstr ""
 msgid "Content slider"
 msgstr ""
 
-#: inc/shortcodes/wyde-slider.php:42
+#: inc/shortcodes/wyde-slider.php:32
+msgid "The autoplay speed."
+msgstr ""
+
+#: inc/shortcodes/wyde-slider.php:54
 msgid "Slide 1"
 msgstr ""
 
-#: inc/shortcodes/wyde-slider.php:42
+#: inc/shortcodes/wyde-slider.php:54
 msgid "Slide 2"
 msgstr ""
 
@@ -3092,11 +3425,11 @@ msgstr ""
 msgid "Client"
 msgstr ""
 
-#: templates/portfolio/widget-meta.php:20
+#: templates/portfolio/widget-meta.php:22
 msgid "Visit Site"
 msgstr ""
 
-#: templates/portfolio/widget-meta.php:23
+#: templates/portfolio/widget-meta.php:25
 msgid "Published"
 msgstr ""
 
@@ -3104,7 +3437,7 @@ msgstr ""
 msgid "Skills"
 msgstr ""
 
-#: templates/shortcodes/wyde_portfolio_grid.php:109
+#: templates/shortcodes/wyde_portfolio_grid.php:105
 msgid "All"
 msgstr ""
 

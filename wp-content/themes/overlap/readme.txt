@@ -53,7 +53,24 @@ CMB2
 ===================================
 UPDATE LOG
 ===================================
-Version 1.1 (latest update)
+Version 1.2 (latest update)
+-Added Media to Importer
+-Added Carousel Speed
+-Added Social Media Links on portfolio single page
+-Added Lightbox Title
+-Updated Portfolio Filters
+-Updated Importer
+-Updated Wyde Core plugin
+-Updated Documentation
+-Fixed Sticky Header
+-Fixed Live Search Date
+-Fixed Overlap Portfolio Pagination
+-Fixed Full Screen Menu on Safari
+-Fixed Grid 5 columns
+
+
+
+Version 1.1 23-06-2016
 -Added WooCommerce 2.6.x compatibility
 -Updated Slider Revolution 5.2.5.4
 -Updated Wyde Core

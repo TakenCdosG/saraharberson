@@ -200,6 +200,10 @@ function overlap_load_scripts(){
         $wyde_page_settings['isPreload'] = true;
     }
 
+    if( overlap_get_option('lightbox_title') ){
+        $wyde_page_settings['lightbox_title'] = true;
+    }
+
     if( overlap_get_option('mobile_animation') ){
         $wyde_page_settings['mobile_animation'] = true;
     }
@@ -209,6 +213,9 @@ function overlap_load_scripts(){
     // Ajax Search
     if( overlap_get_option('ajax_search') ){
         $wyde_page_settings['ajax_search'] = true;
+        if( overlap_get_option('search_show_image') ) $wyde_page_settings['ajax_search_image'] = true;
+        if( overlap_get_option('search_show_author') ) $wyde_page_settings['ajax_search_author'] = true;
+        if( overlap_get_option('search_show_date') ) $wyde_page_settings['ajax_search_date'] = true;
     }
 
     // Ajax Page Transition enabled
@@ -416,7 +423,11 @@ function overlap_footer(){
 
         $footer_page_id = overlap_get_option('footer_page');
 
-        if( $footer_content && !empty($footer_page_id) ){        
+        if( $footer_content && !empty($footer_page_id) ){     
+
+            if( function_exists('icl_object_id') ){
+                $footer_page_id = icl_object_id($footer_page_id, 'page', true);
+            }   
             
             $footer_page = get_post( $footer_page_id );
 
@@ -507,7 +518,7 @@ function overlap_register_required_plugins() {
             'slug'                  => 'wyde-core', 
             'source'                => get_template_directory() .'/inc/plugins/wyde-core.zip',
             'required'              => true, 
-            'version'               => '3.1.2', 
+            'version'               => '3.1.6', 
             'force_activation'      => false,
             'force_deactivation'    => false, 
             'external_url'          => '', 
@@ -527,7 +538,7 @@ function overlap_register_required_plugins() {
             'slug'                  => 'revslider', 
             'source'                => get_template_directory() .'/inc/plugins/revslider.zip',
             'required'              => false, 
-            'version'               => '5.2.5.4',
+            'version'               => '5.2.6',
             'force_activation'      => false, 
             'force_deactivation'    => false, 
             'external_url'          => '',

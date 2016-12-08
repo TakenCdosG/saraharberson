@@ -1,6 +1,6 @@
 <?php
 
-    $has_cover = has_post_thumbnail();
+    $has_cover = overlap_get_option('portfolio_single_featured_image') && has_post_thumbnail();
 
     $images = get_post_meta(get_the_ID(), '_w_gallery_images', true);
                 

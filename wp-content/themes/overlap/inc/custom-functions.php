@@ -31,12 +31,23 @@ function overlap_remove_shortcode( $m ) {
     return $m[1] . $m[6];
 }
 
+/* Get column class name from the number of columns */
+function overlap_get_column_name( $columns = 1 ){
+    $col_name = '';
+    if( intval($columns) == 5 ){
+        $col_name = 'five-cols';
+    }else{
+        $col_name = 'col-'.  absint( floor( 12 / intval( $columns ) ) ); 
+    }
+    return $col_name;
+}
+
 /* Convert column width to column CSS class name */
 function overlap_get_column_class( $width, $offset = '' ){
     
     $classes = array();
 
-    $classes[] = overlap_get_column_name($width);
+    $classes[] = overlap_get_column_name_from_width($width);
 
     if( $offset ){
         $offset_class = overlap_get_column_offset($offset);
@@ -49,7 +60,7 @@ function overlap_get_column_class( $width, $offset = '' ){
 }
 
 /* Get column name */
-function overlap_get_column_name( $width, $prefix = '' ){
+function overlap_get_column_name_from_width( $width, $prefix = '' ){
     $col_name = '';
     if ( preg_match( '/^(\d{1,2})\/12$/', $width, $match ) ) {
         $col_name = 'col-'. $prefix . $match[1];
@@ -386,8 +397,8 @@ function overlap_get_fullscreen_menu_id($id, $item, $args, $depth){
 }
 
 /* Default Menu */
-function overlap_menu($location, $depth){
-    wp_nav_menu(array('theme_location' => $location, 'depth' => $depth, 'container' => false, 'items_wrap' => '%3$s', 'fallback_cb' => false));
+function overlap_menu( $location = '', $depth = 1){
+    wp_nav_menu( array('theme_location' => $location, 'depth' => $depth, 'container' => false, 'walker'=> class_exists( 'Overlap_Walker_Vertical_Nav' ) ? new Overlap_Walker_Vertical_Nav : null, 'items_wrap' => '%3$s', 'fallback_cb' => false) );
 }
 
 /*****************************************
@@ -1023,7 +1034,7 @@ function overlap_blog_archive() {
             $classes[] = 'w-masonry';
             $columns = 3;
             $classes[] = 'grid-'. $columns .'-cols';
-            $col_name = 'col-'.  absint( floor( 12/ $columns ) );
+            $col_name = overlap_get_column_name($columns);
             break;
         case 'overlap':
             $classes[] = 'w-overlap';

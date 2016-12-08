@@ -35,9 +35,9 @@ if (!class_exists('Overlap_Theme_Options')) {
 
         function load_scripts(){
             
-            wp_enqueue_style('overlap-theme-options-style', get_template_directory_uri(). '/admin/css/theme-options.css', null, '1.0.1');
+            wp_enqueue_style('overlap-theme-options-style', get_template_directory_uri(). '/admin/css/theme-options.css', null, '1.1');
     
-            wp_enqueue_script('overlap-ajax-importer-script', get_template_directory_uri(). '/admin/js/ajax-importer.js', null, '1.0.1', true);
+            wp_enqueue_script('overlap-ajax-importer-script', get_template_directory_uri(). '/admin/js/ajax-importer.js', null, '1.1', true);
             
             wp_localize_script('overlap-ajax-importer-script', 'overlap_ajax_importer_settings', 
             array(
@@ -109,6 +109,35 @@ if (!class_exists('Overlap_Theme_Options')) {
             /***************************** 
             * Home
             ******************************/
+            ob_start();
+            ?>
+            <div class="import-wrapper">
+            <h4>Select content</h4>
+                <div class="content-options">                        
+                    <p><label for="task-posts"><input type="checkbox" id="task-posts" value="posts" checked="checked" class="noUpdate"><?php echo esc_html__('Posts', 'overlap'); ?></label></p>
+                    <p><label for="task-pages"><input type="checkbox" id="task-pages" value="pages" checked="checked" class="noUpdate"><?php echo esc_html__('Pages', 'overlap'); ?></label></p>
+                    <p><label for="task-contact-forms"><input type="checkbox" id="task-contact-forms" value="contact-forms" checked="checked" class="noUpdate"><?php echo esc_html__('Contact Forms', 'overlap'); ?></label></p>
+                    <p><label for="task-portfolios"><input type="checkbox" id="task-portfolios" value="portfolios" checked="checked" class="noUpdate"><?php echo esc_html__('Portfolios', 'overlap'); ?></label></p>
+                    <p><label for="task-team-members"><input type="checkbox" id="task-team-members" value="team-members" checked="checked" class="noUpdate"><?php echo esc_html__('Team Members', 'overlap'); ?></label></p>
+                    <p><label for="task-testimonials"><input type="checkbox" id="task-testimonials" value="testimonials" checked="checked" class="noUpdate"><?php echo esc_html__('Testimonials', 'overlap'); ?></label></p>                                            
+                    <p><label for="task-sliders"><input type="checkbox" id="task-sliders" value="sliders" checked="checked" class="noUpdate"><?php echo esc_html__('Sliders', 'overlap'); ?></label></p>
+                    <p><label for="task-menus"><input type="checkbox" id="task-menus" value="menus" checked="checked" class="noUpdate"><?php echo esc_html__('Menus', 'overlap'); ?></label></p>                
+                    <p><label for="task-widgets"><input type="checkbox" id="task-widgets" value="widgets" checked="checked" class="noUpdate"><?php echo esc_html__('Widgets', 'overlap'); ?></label></p>
+                    <p><label for="task-media"><input type="checkbox" id="task-media" value="media-1,media-2,media-3" checked="checked" class="noUpdate"><?php echo esc_html__('Media', 'overlap'); ?></label></p>
+                  </div>
+                  <h4>Select demo type</h4>                  
+                  <div class="import-buttons">
+                      <select id="demo-type" class="noUpdate">'
+                          <option value="multi-pages"><?php echo esc_html__('Multi Pages', 'overlap'); ?></option>
+                         <option value="one-page"><?php echo esc_html__('One Page', 'overlap'); ?></option>
+                      </select>
+                      <button id="btn-import" class="button button-primary noUpdate"><?php echo esc_html__('Import Content', 'overlap'); ?></button>
+                  </div>
+                </div>
+            <?php
+
+            $import_html = ob_get_clean();
+
             $import_fields = array(
                     array(
                         'id'        => 'section_import_content',
@@ -132,28 +161,7 @@ if (!class_exists('Overlap_Theme_Options')) {
                         'id'        => 'raw_import_content',
                         'type'      => 'raw',
                         'content'   => 
-                        '<div class="import-wrapper">'
-                        .'  <h4>Select content</h4>'
-                        .'  <div class="content-options">'                        
-                        .'      <p><label for="task-posts"><input type="checkbox" id="task-posts" value="posts" checked="checked" class="noUpdate">'.esc_html__('Posts', 'overlap').'</label></p>'
-                        .'      <p><label for="task-pages"><input type="checkbox" id="task-pages" value="pages" checked="checked" class="noUpdate">'.esc_html__('Pages', 'overlap').'</label></p>'
-                        .'      <p><label for="task-contact-forms"><input type="checkbox" id="task-contact-forms" value="contact forms" checked="checked" class="noUpdate">'.esc_html__('Contact Forms', 'overlap').'</label></p>'
-                        .'      <p><label for="task-portfolios"><input type="checkbox" id="task-portfolios" value="portfolios" checked="checked" class="noUpdate">'.esc_html__('Portfolios', 'overlap').'</label></p>'
-                        .'      <p><label for="task-team-members"><input type="checkbox" id="task-team-members" value="team members" checked="checked" class="noUpdate">'.esc_html__('Team Members', 'overlap').'</label></p>'
-                        .'      <p><label for="task-testimonials"><input type="checkbox" id="task-testimonials" value="testimonials" checked="checked" class="noUpdate">'.esc_html__('Testimonials', 'overlap').'</label></p>'                                             
-                        .'      <p><label for="task-sliders"><input type="checkbox" id="task-sliders" value="sliders" checked="checked" class="noUpdate">'.esc_html__('Sliders', 'overlap').'</label></p>'
-                        .'      <p><label for="task-menus"><input type="checkbox" id="task-menus" value="menus" checked="checked" class="noUpdate">'.esc_html__('Menus', 'overlap').'</label></p>'                        
-                        .'      <p><label for="task-widgets"><input type="checkbox" id="task-widgets" value="widgets" checked="checked" class="noUpdate">'.esc_html__('Widgets', 'overlap').'</label></p>' 
-                        .'  </div>' 
-                        .'  <h4>Select demo type</h4>'                        
-                        .'  <div class="import-buttons">'
-                        .'      <select id="demo-type" class="noUpdate">'
-                        .'          <option value="multi-pages">'. esc_html__('Multi Pages', 'overlap') .'</option>'
-                        .'          <option value="one-page">'. esc_html__('One Page', 'overlap') .'</option>'
-                        .'      </select>'
-                        .'      <button id="btn-import" class="button button-primary noUpdate">'. esc_html__('Import Content', 'overlap') .'</button>'
-                        .'  </div>'
-                        .'</div>',
+                        $import_html,
                     ),
                     array(
                         'id'        => 'section_import_settings',
@@ -265,6 +273,13 @@ if (!class_exists('Overlap_Theme_Options')) {
                         'default'   => false,
                     ),
                     array(
+                        'id'        => 'lightbox_title',
+                        'type'      => 'switch',
+                        'title'     => esc_html__('Lightbox Title', 'overlap'),
+                        'subtitle'  => esc_html__('Display the lightbox title.', 'overlap'),
+                        'default'   => true,
+                    ),
+                    array(
                         'id'        => 'totop_button',
                         'type'      => 'switch',
                         'title'     => esc_html__('Back To Top Button', 'overlap'),
@@ -294,11 +309,9 @@ if (!class_exists('Overlap_Theme_Options')) {
                     array(
                         'id'        => 'page_loader_image',
                         'type'      => 'media',
-                        'url'       => true,
                         'title'     => esc_html__('Loader Icon', 'overlap'),
                         'required'  => array('page_loader', '=', '3'),
                         'height'    => '45px',
-                        'readonly'  => false,
                         'subtitle'  => esc_html__('Loader image to display at the center of the loader animation.', 'overlap'),
                         'desc'      => esc_html__('Maximum height: 70px.', 'overlap'),
                         'default'   => array(        
@@ -343,9 +356,7 @@ if (!class_exists('Overlap_Theme_Options')) {
                         array(
                             'id'        => 'favicon_image',
                             'type'      => 'media',
-                            'url'       => true,
                             'title'     => esc_html__('Favicon Image (.PNG)', 'overlap'),
-                            'readonly'  => false,
                             'subtitle'  => esc_html__('Upload a favicon image for your site, or you can specify an image URL directly.', 'overlap'),
                             'desc'      => esc_html__('Icon dimension:', 'overlap').' 16px * 16px or 32px * 32px',
                             'default'   => array(        
@@ -355,9 +366,7 @@ if (!class_exists('Overlap_Theme_Options')) {
                         array(
                             'id'        => 'favicon',
                             'type'      => 'media',
-                            'url'       => true,
                             'title'     => esc_html__('Favicon (.ICO)', 'overlap'),
-                            'readonly'  => false,
                             'subtitle'  => esc_html__('Upload a favicon for your site, or you can specify an icon URL directly.', 'overlap'),
                             'desc'      => esc_html__('Icon dimension:', 'overlap').' 16px * 16px',
 
@@ -365,40 +374,32 @@ if (!class_exists('Overlap_Theme_Options')) {
                         array(
                             'id'        => 'favicon_iphone',
                             'type'      => 'media',
-                            'url'       => true,
                             'title'     => esc_html__('Apple iPhone Icon', 'overlap'),
                             'height'    => '57px',
-                            'readonly'  => false,
                             'subtitle'  => esc_html__('Favicon for Apple iPhone.', 'overlap'),
                             'desc'      => esc_html__('Icon dimension:', 'overlap').' 57px * 57px',
                         ),
                         array(
                             'id'        => 'favicon_iphone_retina',
                             'type'      => 'media',
-                            'url'       => true,
                             'title'     => esc_html__('Apple iPhone Icon (Retina Version)', 'overlap'),
                             'height'    => '57px',
-                            'readonly'  => false,
                             'subtitle'  => esc_html__('Favicon for Apple iPhone Retina Version.', 'overlap'),
                             'desc'      => esc_html__('Icon dimension:', 'overlap').' 114px  * 114px',
                         ),
                         array(
                             'id'        => 'favicon_ipad',
                             'type'      => 'media',
-                            'url'       => true,
                             'title'     => esc_html__('Apple iPad Icon', 'overlap'),
                             'height'    => '72px',
-                            'readonly'  => false,
                             'subtitle'  => esc_html__('Favicon for Apple iPad.', 'overlap'),
                             'desc'      => esc_html__('Icon dimension:', 'overlap').' 72px * 72px',
                         ),
                         array(
                             'id'        => 'favicon_ipad_retina',
                             'type'      => 'media',
-                            'url'       => true,
                             'title'     => esc_html__('Apple iPad Icon (Retina Version)', 'overlap'),
                             'height'    => '57px',
-                            'readonly'  => false,
                             'subtitle'  => esc_html__('Favicon for Apple iPad Retina Version.', 'overlap'),
                             'desc'      => esc_html__('Icon dimension:', 'overlap').' 144px  * 144px',
                         )
@@ -449,7 +450,6 @@ if (!class_exists('Overlap_Theme_Options')) {
                     array(
                         'id'        => 'slidingbar',
                         'type'      => 'switch',
-                        'required'  => array('nav_layout', '!=', '3'),
                         'title'     => esc_html__('Sliding Bar', 'overlap'),
                         'subtitle'  => esc_html__('Turn on to display a sliding widget area.', 'overlap'),
                         'default'   => false
@@ -733,10 +733,8 @@ if (!class_exists('Overlap_Theme_Options')) {
                         'id'        => 'footer_logo_image',
                         'type'      => 'media',
                         'required'  => array('footer_logo', '=', 1),
-                        'url'       => true,
                         'title'     => esc_html__('Footer Logo Image', 'overlap'),
                         'height'    => '45px',
-                        'readonly'  => false,
                         'subtitle'  => esc_html__('Upload a footer logo image, or you can specify an image URL directly.', 'overlap'),
                         'default'   => array(        
                                             'url'=> get_template_directory_uri() .'/images/logo/logo-footer.png'
@@ -746,10 +744,8 @@ if (!class_exists('Overlap_Theme_Options')) {
                         'id'        => 'footer_logo_retina',
                         'type'      => 'media',
                         'required'  => array('footer_logo', '=', 1),
-                        'url'       => true,
                         'title'     => esc_html__('Footer Logo (Retina Version)', 'overlap'),
                         'height'    => '90px',
-                        'readonly'  => false,
                         'subtitle'  => esc_html__('Upload a retina logo image, or you can specify an image URL directly.', 'overlap'),
                         'desc'      => esc_html__('It should be exactly 2x the size of normal logo.', 'overlap'),
                         'default'   => array(        
@@ -900,9 +896,7 @@ if (!class_exists('Overlap_Theme_Options')) {
                         'required'  => array('title_background_mode', '=', 'video'),
                         'title'     => esc_html__('Background Video', 'overlap'),
                         'subtitle'  => esc_html__('Select an MP4 video to display as title background.', 'overlap'),
-                        'url'       => true,
                         'mode'      => false,
-                        'readonly'  => false
                     ),
                     array(
                         'id'        => 'title_background_color',
@@ -1125,10 +1119,8 @@ if (!class_exists('Overlap_Theme_Options')) {
                     array(
                         'id'        => 'blog_placeholder_image',
                         'type'      => 'media',
-                        'url'       => true,
                         'title'     => esc_html__('Placeholder Image', 'overlap'),
                         'height'     => '540px',
-                        'readonly'  => false,
                         'subtitle'  => esc_html__('Select a cover image placeholder.', 'overlap'),
                         'desc'      => esc_html__('Recommended size: 960x540 px or larger.', 'overlap'),
                         'default'  => array(        
@@ -1426,9 +1418,7 @@ if (!class_exists('Overlap_Theme_Options')) {
                     array(
                         'id'        => 'portfolio_placeholder_image',
                         'type'      => 'media',
-                        'url'       => true,
                         'title'     => esc_html__('Placeholder Image', 'overlap'),
-                        'readonly'  => false,
                         'subtitle'  => esc_html__('Select a cover image placeholder.', 'overlap'),
                         'desc'      => esc_html__('Recommended size: 640x640 px or larger.', 'overlap'),
                         'default'  => array(        
@@ -1450,6 +1440,13 @@ if (!class_exists('Overlap_Theme_Options')) {
                         'title'     => esc_html__('Portfolio Slug', 'overlap'),
                         'subtitle'  => esc_html__('Change/Rewrite the permalink when you use the permalink type as %postname%.', 'overlap'),
                         'default'   => 'portfolio-item'
+                    ),    
+                    array(
+                        'id'        => 'portfolio_single_featured_image',
+                        'type'      => 'switch',
+                        'title'     => __('Display Featured Image', 'overlap'),
+                        'subtitle'  => __('Turn on to display featured image on portfolio single post.', 'overlap'),
+                        'default'   => true
                     ),
                     array(
                         'id'        => 'portfolio_lightbox_size',
@@ -1468,6 +1465,13 @@ if (!class_exists('Overlap_Theme_Options')) {
                         'type'      => 'switch',
                         'title'     => esc_html__('Publish Date', 'overlap'),
                         'subtitle'  => esc_html__('Display portfolio publish date.', 'overlap'),                        
+                        'default'   => true
+                    ),
+                    array(
+                        'id'        => 'portfolio_single_share',
+                        'type'      => 'switch',
+                        'title'     => esc_html__('Social Share Buttons', 'overlap'),
+                        'subtitle'  => esc_html__('Display social media share buttons on the portfolio single post.', 'overlap'),                        
                         'default'   => true
                     ),
                     array(
@@ -2144,13 +2148,6 @@ if (!class_exists('Overlap_Theme_Options')) {
                 'heading'     => false,
                 'fields'    => array(
                     array(
-                        'id'        => 'section_maps_section',
-                        'type'      => 'section',
-                        'title'     => esc_html__('Google Maps Options', 'overlap'),
-                        'subtitle'  => wp_kses( __('This is now an optional but will be required in the future as you can see in <a href="https://developers.google.com/maps/documentation/javascript/get-api-key" target="_blank">Google Maps Documentation</a> (All Google Maps JavaScript API applications require authentication).', 'overlap'), $allowed_html ),
-                        'indent'    => true
-                    ),
-                    array(
                         'id'        => 'google_maps_api_key',
                         'type'      => 'text',
                         'title'     => esc_html__('Google Maps API Key', 'overlap'),
@@ -2186,24 +2183,25 @@ if (!class_exists('Overlap_Theme_Options')) {
                     ),
                   )
             );
-                       
+
+            
             /***************************** 
-            * Import / Export
+            * Theme Settings
             ******************************/
             $this->sections['import_export'] = array(
-                'title'     => esc_html__('Import / Export', 'overlap'),
+                'title'     => esc_html__('Settings', 'gogreen'),
                 'heading' => false,
-                'icon'      => 'el-icon-refresh',
+                'icon'      => 'el-icon-cog',
                 'fields'    => array(
                     array(
                         'id'            => 'opt-import-export',
                         'type'          => 'import_export',
-                        'title'         => esc_html__('Import and Export', 'overlap'),
-                        'subtitle'      => esc_html__('Import and Export your Theme options.', 'overlap'),
+                        'title'         => esc_html__('Theme Options', 'gogreen'),
+                        'subtitle'      => esc_html__('Import and Export your Theme Options.', 'gogreen'),
                         'full_width'    => false,
                     ),
                 ),
-            );                     
+            );                
 
             /***************************** 
             * Theme Information

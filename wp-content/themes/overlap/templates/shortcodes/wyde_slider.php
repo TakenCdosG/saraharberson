@@ -14,7 +14,12 @@
 
     $attrs['class'] = implode(' ', $classes);
 
-    $attrs['data-auto-play'] = ($auto_play == 'true' ? 'true':'false');
+    if( $auto_play == 'true' ){
+        $slider_attrs['data-auto-play'] = 'true';
+        $slider_attrs['data-speed'] = $speed;
+    }else{
+        $slider_attrs['data-auto-play'] = 'false';
+    }
     if( !empty($transition) ) $attrs['data-transition'] = $transition;
 
     // Extract tab titles

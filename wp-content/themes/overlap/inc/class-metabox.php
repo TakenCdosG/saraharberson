@@ -5,9 +5,13 @@ if( !class_exists('Overlap_MetaBox') ){
     class Overlap_MetaBox{
 
         protected $post_type = ''; 
+        public $post_types = array();
 
         function __construct(){
             global $pagenow;
+
+            $this->post_types = array('post', 'page', 'wyde_portfolio', 'wyde_team_member', 'wyde_testimonial');
+
 		    if ( is_admin() && ( $pagenow == 'post-new.php' || $pagenow == 'post.php' ) ) {
                 if( defined( 'CMB2_LOADED' ) && CMB2_LOADED == true ){
                     add_action( 'cmb2_init', array($this, 'register_metaboxes') );
@@ -24,14 +28,8 @@ if( !class_exists('Overlap_MetaBox') ){
         public function register_metaboxes() {
 
             $this->post_type = $this->get_current_post_type();
-            switch( $this->post_type ){
-                case 'post':
-                case 'page':
-                case 'wyde_portfolio':
-                case 'wyde_team_member':
-                case 'wyde_testimonial':
-                    include get_template_directory() .'/inc/metaboxes/'. $this->post_type .'-options.php';
-                break;
+            if( in_array($this->post_type, $this->post_types) ){                
+                include get_template_directory() .'/inc/metaboxes/'. $this->post_type .'-options.php';
             }
 
         }
@@ -62,7 +60,9 @@ if( !class_exists('Overlap_MetaBox') ){
 
         public function add_metaboxes(){
             $this->post_type = $this->get_current_post_type();
-            add_meta_box( 'overlap_options', esc_html__('Overlap Options', 'overlap'), array( $this, 'show_metaboxes' ), $this->post_type, 'normal', 'high' );
+            if( in_array($this->post_type, $this->post_types) ){  
+                add_meta_box( 'overlap_options', esc_html__('Overlap Options', 'overlap'), array( $this, 'show_metaboxes' ), $this->post_type, 'normal', 'low' );
+            }
         }
 
         public function show_metaboxes(){

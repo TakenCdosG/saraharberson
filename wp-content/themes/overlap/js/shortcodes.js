@@ -4,6 +4,25 @@
     /*****************************************
     *   Initialize Shortcodes
     /*****************************************/
+    function initSections(){
+
+        var fullHeightSections = function(){
+            $(".w-section.w-full-height, .row.w-full-height").css("min-height", $(window).height());
+        };
+
+
+        $(window).smartresize(function(){
+            fullHeightSections();
+        });
+
+        fullHeightSections();
+        
+
+        //if ( !wyde.browser.touch && (wyde.browser.md || wyde.browser.lg) ) {
+            initSectionParallax();
+        //}
+    }
+
     function initSectionParallax() {
 
         setTimeout(function () {
@@ -200,6 +219,9 @@
                     var autoPlay = false;
                     if ($el.data("autoPlay") != undefined) autoPlay = $el.data("autoPlay");
 
+                    var speed = 4000;
+                    if ($el.data("speed") != undefined) speed = parseInt( $el.data("speed") ) * 1000;
+
                     var autoHeight = false;
                     if ($el.data("autoHeight") != undefined) autoHeight = $el.data("autoHeight");
 
@@ -209,6 +231,8 @@
                     var pagination = false;
                     if ($el.data("pagination") != undefined) pagination = $el.data("pagination");
 
+
+
                     $el.owlCarousel({
                         autoHeight: autoHeight,
                         autoplayHoverPause: true,
@@ -216,7 +240,7 @@
                         items: items,
                         slideBy: items,
                         autoplay: (autoPlay != false),
-                        autoplayTimeout: autoPlay ? 6000 : false,
+                        autoplayTimeout: autoPlay ? speed : false,
                         nav: navigation,
                         dots: pagination,
                         loop: loop,
@@ -289,6 +313,9 @@
 
             var autoPlay = false;
             if ($el.data("autoPlay") != undefined) autoPlay = $el.data("autoPlay");
+
+            var speed = 4000;
+            if ($el.data("speed") != undefined) speed = parseInt( $el.data("speed") );
             
             $el.waitForImages({
                 finished: function () {
@@ -300,6 +327,7 @@
                         items: 1,
                         autoplay: (autoPlay != false),
                         autoplayTimeout: autoPlay ? 4000 : false,
+                        autoplaySpeed: speed,
                         nav: false,
                         dots: true,
                         loop: true,
@@ -424,30 +452,7 @@
                         $(".pp_inline .member-detail").wydeScroller({fadeOutBottom:true});
                     }, 100);
                 },
-                markup: '<div class="pp_pic_holder"> \
-                            <div class="ppt">&nbsp;</div> \
-                            <div class="pp_content_container"> \
-                                    <div class="pp_content"> \
-                                        <div class="pp_loaderIcon"><span class="w-loader"></span></div> \
-                                        <div class="pp_fade"> \
-                                            <a href="#" class="pp_expand" title="Expand the image"></a> \
-                                            <div class="pp_hoverContainer"> \
-                                                <a class="pp_previous" href="#"></a> \
-                                                <a class="pp_next" href="#"></a> \
-                                            </div> \
-                                            <div id="pp_full_res"></div> \
-                                            <div class="pp_details"> \
-                                                <div class="pp_nav"> \
-                                                    <a href="#" class="pp_arrow_previous"></a> \
-                                                    <span class="currentTextHolder">0/0</span> \
-                                                    <a href="#" class="pp_arrow_next"></a> \
-                                                </div> \
-                                            </div> \
-                                        </div> \
-                                    </div> \
-                            </div> \
-                        </div> \
-                        <div class="pp_overlay"></div>',
+                markup: '<div class="pp_pic_holder"><div class="ppt">&nbsp;</div><div class="pp_content_container"><div class="pp_content"><div class="pp_loaderIcon"><span class="w-loader"></span></div><div class="pp_fade"><a href="#" class="pp_expand" title="Expand the image"></a><div class="pp_hoverContainer"><a class="pp_previous" href="#"></a><a class="pp_next" href="#"></a></div><div id="pp_full_res"></div><div class="pp_details"><div class="pp_nav"><a href="#" class="pp_arrow_previous"></a><span class="currentTextHolder">0/0</span><a href="#" class="pp_arrow_next"></a></div></div></div></div></div></div><div class="pp_overlay"></div>',
                 inline_markup: '<div class="pp_inline">{content}</div>',
                 iframe_markup: '<div class="video-wrapper"><iframe src ="{path}" width="100%" height="{height}" frameborder="no"></iframe></div>'
 
@@ -543,7 +548,6 @@
 
                     $el.find("li").removeClass("active");
                     $(this).parent().addClass("active");
-                    $grid.find(".w-showmore").toggle(hash=="*");
                     return false;
                 });
             });                     
@@ -576,36 +580,34 @@
             deeplinking: false,
             social_tools: false,
             overlay_gallery: false,
-            show_title: false,
+            show_title: (window.wyde && wyde.page && wyde.page.lightbox_title == true),
             horizontal_padding: 0,
             allow_resize: true,
             default_width: 1170,
             default_height: 658,
             changepicturecallback: function () {},
-            markup: '<div class="pp_pic_holder"> \
-                        <div class="ppt">&nbsp;</div> \
-                        <div class="pp_content_container"> \
-                                <div class="pp_content"> \
-                                    <div class="pp_loaderIcon"><span class="w-loader"></span></div> \
-                                    <div class="pp_fade"> \
-                                        <a href="#" class="pp_expand" title="Expand the image"></a> \
-                                        <div class="pp_hoverContainer"> \
-                                            <a class="pp_previous" href="#"></a> \
-                                            <a class="pp_next" href="#"></a> \
-                                        </div> \
-                                        <div id="pp_full_res"></div> \
-                                        <div class="pp_details"> \
-                                            <div class="pp_nav"> \
-                                                <a href="#" class="pp_arrow_previous"></a> \
-                                                <span class="currentTextHolder">0/0</span> \
-                                                <a href="#" class="pp_arrow_next"></a> \
-                                            </div> \
-                                        </div> \
-                                    </div> \
-                                </div> \
-                        </div> \
-                    </div> \
-                    <div class="pp_overlay"></div>',
+            markup: '<div class="pp_pic_holder"><div class="ppt">&nbsp;</div>'+
+                        '<div class="pp_content_container">'+
+                                '<div class="pp_content">'+
+                                    '<div class="pp_loaderIcon"><span class="w-loader"></span></div>'+
+                                    '<div class="pp_fade">'+
+                                        '<a href="#" class="pp_expand" title="Expand the image"></a>'+
+                                        '<div class="pp_hoverContainer">'+
+                                            '<a class="pp_previous" href="#"></a><a class="pp_next" href="#"></a>'+
+                                        '</div>'+
+                                        '<div id="pp_full_res"></div>'+
+                                        '<div class="pp_details">'+
+                                            '<div class="pp_nav">'+
+                                                '<a href="#" class="pp_arrow_previous"></a>'+
+                                                '<a href="#" class="pp_arrow_next"></a>'+                                                
+                                                '<span class="currentTextHolder">0/0</span>'+                                              
+                                            '</div>'+
+                                        '</div>'+
+                                    '</div>'+
+                                '</div>'+
+                        '</div>'+
+                    '</div>'+
+                    '<div class="pp_overlay"></div>',
             inline_markup: '<div class="pp_inline"><a href="#" class="pp_close"></a>{content}</div>',
             iframe_markup: '<div class="video-wrapper"><iframe src ="{path}" width="100%" height="{height}" frameborder="no"></iframe></div>'
 
@@ -1020,9 +1022,7 @@
             $("[data-animation]").wydeAnimated();
         }
         
-        if ( !wyde.browser.touch && (wyde.browser.md || wyde.browser.lg) ) {
-            initSectionParallax();
-        }
+        initSections();
 
     });
 

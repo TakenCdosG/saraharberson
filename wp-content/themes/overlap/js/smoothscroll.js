@@ -683,7 +683,8 @@ var isChrome  = /chrome/i.test(userAgent) && !isEdge;
 var isSafari  = /safari/i.test(userAgent) && !isEdge; 
 var isMobile  = /mobile/i.test(userAgent);
 var isIEWin7  = /Windows NT 6.1/i.test(userAgent) && /rv:11/i.test(userAgent);
-var isEnabledForBrowser = (isChrome || isSafari || isIEWin7) && !isMobile;
+
+var isEnabledForBrowser = (isChrome || isIEWin7) && !(isMobile && isSafari);
 
 var wheelEvent;
 if ('onwheel' in document.createElement('div'))

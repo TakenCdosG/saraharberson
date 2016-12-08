@@ -2978,6 +2978,8 @@ SECTION SEPARATOR
 /*==================================*/
 .w-section-separator{
     position: relative;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
 }
 
 .w-section-separator svg{

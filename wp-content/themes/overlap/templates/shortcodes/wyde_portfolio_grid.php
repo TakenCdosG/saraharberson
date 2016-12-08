@@ -14,12 +14,8 @@
 		$current_page = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 	}
 
-    if( $view == 'overlap' ){
-        if($current_page == 1){
-            $count = 9;
-        }else{
-            $count = 4;
-        }
+    if( $view == 'overlap' ){        
+        $count = 9;        
         if( $pagination == 'hide' ){
             $count += 1;
         }
@@ -49,7 +45,7 @@
             $columns = intval( $columns );
             $classes[] = 'w-'. $view;
             $classes[] = 'grid-'. $columns .'-cols';
-            $col_name = 'col-'.  absint( floor(12/ $columns ) );
+            $col_name = overlap_get_column_name($columns);
         break;        
         case 'masonry':
             $classes[] = 'w-masonry w-standard';            
@@ -60,7 +56,7 @@
             $columns = intval( $columns );
             $classes[] = 'w-masonry w-photoset';
             $classes[] = 'grid-'. $columns .'-cols';
-            $col_name = 'col-'.  absint( floor(12/ $columns ) );
+            $col_name = overlap_get_column_name($columns);
             $masonry_layout = $this->get_masonry_layout($view);
             $layout_count = count($masonry_layout);
             break;

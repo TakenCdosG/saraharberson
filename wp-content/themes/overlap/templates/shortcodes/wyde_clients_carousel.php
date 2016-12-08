@@ -22,11 +22,17 @@
 
     $slider_attrs['class'] = 'owl-carousel';
 
-    $slider_attrs['data-items'] =  intval( $visible_items );
-    $slider_attrs['data-auto-play'] = ($auto_play == 'true' ? 'true':'false');
+    $slider_attrs['data-items'] =  intval( $visible_items );    
     $slider_attrs['data-navigation'] = ($show_navigation == 'true' ?  'true':'false');
     $slider_attrs['data-pagination'] = ($show_pagination == 'true' ? 'true':'false');
     $slider_attrs['data-loop'] = ($loop == 'true' ? 'true':'false');
+
+    if( $auto_play == 'true' ){
+        $slider_attrs['data-auto-play'] = 'true';
+        $slider_attrs['data-speed'] = $speed;
+    }else{
+        $slider_attrs['data-auto-play'] = 'false';
+    }
 
     if( !empty($images) ){
         $images = explode(',', $images);
@@ -37,13 +43,8 @@
     <div<?php echo overlap_get_attributes( $slider_attrs );?>>
     <?php foreach ($images as $image_id ){ ?>
         <div>
-        <?php $image_attrs = wp_get_attachment_image_src($image_id, $image_size); ?>
-        <?php if($image_attrs[0]) :?>
-        <?php 
-            $this_img = get_post( $image_id ); // Get post by ID
-            $this_img_url = esc_url($this_img->post_content); // Display Description
-        ?>
-            <a href ="<?php echo $this_img_url;  ?>"><img src="<?php echo esc_url( $image_attrs[0] ); ?>" alt="<?php esc_attr( $title ); ?>" /></a>
+        <?php if($image_id) : ?>
+            <?php echo wp_get_attachment_image($image_id, $image_size, false); ?>
         <?php endif; ?>
         </div>
     <?php } ?>

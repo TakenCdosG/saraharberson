@@ -113,7 +113,7 @@ vc_map( array(
             'param_name' => 'visible_items',
             'type' => 'dropdown',
             'heading' => esc_html__('Visible Items', 'overlap'),                    
-            'value' => array('auto', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'),
+            'value' => array('1', '2', '3', '4', '5', '6', '7', '8', '9', '10'),
             'std' => '3',
             'description' => esc_html__('The maximum amount of items displayed at a time.', 'overlap'),
             'dependency' => array(
@@ -149,6 +149,18 @@ vc_map( array(
             'dependency' => array(
                 'element' => 'gallery_type',
                 'value' => array('slider')
+            )
+        ),
+        array(
+            'param_name' => 'speed',
+            'type' => 'dropdown',
+            'heading' => esc_html__('Speed', 'overlap'),                    
+            'value' => array('1', '2', '3', '4', '5', '6', '7', '8', '9', '10'),
+            'std' => '4',
+            'description' => esc_html__('The amount of time between each slideshow interval (in seconds).', 'overlap'),
+            'dependency' => array(
+                'element' => 'auto_play',
+                'value' => 'true'
             )
         ),
         array(

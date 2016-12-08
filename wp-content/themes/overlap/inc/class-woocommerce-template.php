@@ -56,12 +56,10 @@ if( ! class_exists( 'Overlap_WooCommerce_Template' ) ) {
             add_action( 'woocommerce_after_shop_loop_item', array($this, 'after_shop_loop_item'), 9999 );
            
             
-
             remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
             add_action( 'woocommerce_after_single_product_summary', array($this, 'upsell_display'), 15 );
 
             remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display' );
-            //add_action( 'woocommerce_after_cart', 'woocommerce_cross_sell_display' );
             
             add_filter( 'loop_shop_per_page', array($this, 'loop_shop_per_page'), 20 );
 
@@ -173,15 +171,14 @@ if( ! class_exists( 'Overlap_WooCommerce_Template' ) ) {
             if( overlap_get_sidebar_position() == '3' ){
                 overlap_sidebar('shop', '3');
             }
-            echo '</div></div></div>';
-            
+            echo '</div></div></div>';            
         }
 
         function get_product_class( $classes ) {   
 
             global $woocommerce_loop;
 
-            if( is_single() && !isset( $woocommerce_loop['name'] ) ){
+            if( is_single() && ! ( isset( $woocommerce_loop['name'] ) && !empty($woocommerce_loop['name']) ) ){
                 return $classes;
             }
 
@@ -190,12 +187,9 @@ if( ! class_exists( 'Overlap_WooCommerce_Template' ) ) {
                 $columns = intval( $woocommerce_loop['columns'] );
 
                 // Extra post classes
-                $classes[] = 'w-item';
-                if( $columns == 5 ){
-                    $classes[] = 'five-cols';
-                }else{
-                    $classes[] = 'col-'.  absint( floor(12/ $columns ) ); 
-                }    
+                $classes[] = 'w-item';                
+                $classes[] = overlap_get_column_name($columns);
+                 
             }
      
             return $classes;
@@ -292,8 +286,6 @@ function overlap_woocommerce_dropdown_menu(){
         overlap_dropdown_cart_contents(),   
         overlap_dropdown_cart_total(),        
         overlap_dropdown_account_items()
-
-
     );
 
     return $menu_content;

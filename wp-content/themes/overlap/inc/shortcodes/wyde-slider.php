@@ -29,7 +29,19 @@ vc_map( array(
             'param_name' => 'auto_play',
             'type' => 'checkbox',             
             'heading' => __('Auto Play', 'overlap'),                
-            'description' => __('Auto play slide.', 'overlap'),            
+            'description' => __('The autoplay speed.', 'overlap'),            
+        ),
+        array(
+            'param_name' => 'speed',
+            'type' => 'dropdown',
+            'heading' => esc_html__('Speed', 'overlap'),                    
+            'value' => array('1', '2', '3', '4', '5', '6', '7', '8', '9', '10'),
+            'std' => '4',
+            'description' => esc_html__('The amount of time between each slideshow interval (in seconds).', 'overlap'),
+            'dependency' => array(
+                'element' => 'auto_play',
+                'value' => 'true'
+            )
         ),
         array(
             'param_name' => 'el_class',
@@ -39,6 +51,6 @@ vc_map( array(
         ),
     ),
     'custom_markup' => '<div class="wpb_tabs_holder wpb_holder vc_container_for_children"><ul class="tabs_controls"></ul>%content%</div>',
-    'default_content' => '[wyde_slide title="' . __( 'Slide 1', 'overlap' ) . '" slide_id="' . $slide_id_1 . '"][/wyde_slide][wyde_slide title="' . __( 'Slide 2', 'overlap' ) . '" slide_id="' . $slide_id_2 . '"][/wyde_slide]',
+    'default_content' => '[wyde_slide title="' . esc_html__( 'Slide 1', 'overlap' ) . '" slide_id="' . $slide_id_1 . '"][/wyde_slide][wyde_slide title="' . esc_html__( 'Slide 2', 'overlap' ) . '" slide_id="' . $slide_id_2 . '"][/wyde_slide]',
     'js_view' => 'WydeSliderView',
 ) );

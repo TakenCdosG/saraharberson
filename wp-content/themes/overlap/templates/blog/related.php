@@ -23,11 +23,9 @@
          
         if( $post_query->have_posts() ) {
 
-        if( $columns == 5 ){
-            $col_name = 'five-cols';
-        }else{
-            $col_name = 'col-'.  absint( floor(12/ $columns ) );
-        }
+        
+        $col_name = overlap_get_column_name($columns);
+        
         
 ?>
 <div class="related-posts">

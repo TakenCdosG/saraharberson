@@ -36,6 +36,14 @@
         $classes[] = 'wp-default-video';
     }    
 
+    if( !empty($el_class) ){
+        $classes[] = $el_class;
+    }
+
+    if( !empty($css) ){
+        $classes[] = vc_shortcode_custom_css_class( $css, '' );    
+    }
+
     $attrs['class'] = preg_replace( '/\s+/', ' ', apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, implode(' ', $classes), $this->settings['base'], $atts ) );
 
 ?>

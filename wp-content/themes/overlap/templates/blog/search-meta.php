@@ -7,7 +7,7 @@
     </span>
     <?php }?>
     <?php if( overlap_get_option('search_show_author') ){?>
-    <span class="post-author">
+    <span>
         <?php echo the_author_posts_link();?>
     </span>
     <?php }?>

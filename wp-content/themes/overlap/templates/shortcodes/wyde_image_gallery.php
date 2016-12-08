@@ -20,10 +20,15 @@
         case 'slider':
             $gallery_attrs['class'] = 'owl-carousel';
             $gallery_attrs['data-items'] =  intval( $visible_items );
-            $gallery_attrs['data-auto-play'] = ($auto_play == 'true' ? 'true':'false');
             $gallery_attrs['data-navigation'] = ($show_navigation == 'true' ?  'true':'false');
             $gallery_attrs['data-pagination'] = ($show_pagination == 'true' ? 'true':'false');
             $gallery_attrs['data-loop'] = ($loop == 'true' ? 'true':'false');
+            if( $auto_play == 'true' ){
+                $gallery_attrs['data-auto-play'] = 'true';
+                $gallery_attrs['data-speed'] = $speed;
+            }else{
+                $gallery_attrs['data-auto-play'] = 'false';
+            }
             if( !empty($transition) ) $gallery_attrs['data-transition'] = $transition;
         break;
         case 'masonry':
@@ -40,7 +45,7 @@
             $gallery_attrs['class'] = 'w-view clear';
             if( !empty($hover_effect) ) $gallery_attrs['class'] .= ' w-effect-'. $hover_effect;
             
-            $col_name = 'col-'.  absint( floor(12/ intval( $columns ) ) );
+            $col_name = overlap_get_column_name($columns);
 
         break;
     }

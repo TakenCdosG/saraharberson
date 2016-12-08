@@ -18,54 +18,57 @@ if( !class_exists('Overlap_Ajax_Importer') ) {
                
                     $demo = isset( $_GET['demo'] )? $_GET['demo'] : '1';
                     $demo_type = isset( $_GET['demo_type'] )? $_GET['demo_type'] : 'multi-pages';
-                    $type = isset( $_GET['type'] )? $_GET['type'] : 'settings';                    
-
-                    $code = '';
-
+                    $type = isset( $_GET['type'] )? trim($_GET['type']) : 'settings';
                     $importer = new Wyde_Importer();
                    
                 try{
 
                     switch( strtolower($type) ){                        
                         case 'posts':
-                        $importer->import_demo_content( get_template_directory() . '/admin/data/shared/posts.xml'); 
-                        break;
+                            $importer->import_demo_content( get_template_directory() . '/admin/data/shared/posts.xml'); 
+                            break;
                         case 'pages':
-                        $importer->import_demo_content( get_template_directory() . '/admin/data/'.$demo_type.'/pages.xml'); 
-                        break;
+                            $importer->import_demo_content( get_template_directory() . '/admin/data/'.$demo_type.'/pages.xml'); 
+                            break;
                         case 'portfolios':
-                        $importer->import_demo_content( get_template_directory() . '/admin/data/shared/portfolios.xml'); 
-                        break;
+                            $importer->import_demo_content( get_template_directory() . '/admin/data/shared/portfolios.xml'); 
+                            break;
                         case 'testimonials':
-                        $importer->import_demo_content( get_template_directory() . '/admin/data/shared/testimonials.xml'); 
-                        break;
-                        case 'team members':
-                        $importer->import_demo_content( get_template_directory() . '/admin/data/shared/team-members.xml'); 
-                        break;
-                        case 'contact forms':
-                        $importer->import_demo_content( get_template_directory() . '/admin/data/'.$demo_type.'/contact-forms.xml'); 
-                        break;
+                            $importer->import_demo_content( get_template_directory() . '/admin/data/shared/testimonials.xml'); 
+                            break;
+                        case 'team-members':
+                            $importer->import_demo_content( get_template_directory() . '/admin/data/shared/team-members.xml'); 
+                            break;
+                        case 'contact-forms':
+                            $importer->import_demo_content( get_template_directory() . '/admin/data/'.$demo_type.'/contact-forms.xml'); 
+                            break;
                         case 'widgets':
-                        $importer->import_widgets( get_template_directory_uri() . '/admin/data/shared/widget_data.txt');
-                        break;
+                            $importer->import_widgets( get_template_directory_uri() . '/admin/data/shared/widget_data.txt');
+                            break;
                         case 'sliders':
-                        $importer->import_revsliders( get_template_directory() . '/admin/data/shared/revsliders/');
-                        break;
+                            $importer->import_revsliders( get_template_directory() . '/admin/data/shared/revsliders/');
+                            break;
                         case 'menus':
-                        $importer->import_demo_content( get_template_directory() . '/admin/data/'.$demo_type.'/menus.xml');  
-                        break;    
-                        case 'media':
-                        $importer->import_demo_content( get_template_directory() . '/admin/data/'.$demo_type.'/media.xml'); 
-                        break;
+                            $importer->import_demo_content( get_template_directory() . '/admin/data/'.$demo_type.'/menus.xml');  
+                            break;    
+                        case 'media-1':                           
+                            $importer->import_demo_content( get_template_directory() . '/admin/data/'.$demo_type.'/media-1.xml');               
+                            break;
+                        case 'media-2':                           
+                            $importer->import_demo_content( get_template_directory() . '/admin/data/'.$demo_type.'/media-2.xml');               
+                            break;
+                        case 'media-3':                           
+                            $importer->import_demo_content( get_template_directory() . '/admin/data/'.$demo_type.'/media-3.xml');               
+                            break;
                         case 'settings':                        
-                        $this->default_settings($demo);
-                        break;
+                            $this->default_settings($demo);
+                            break;
                     }   
 
-                    echo json_encode( array('code' => '1', 'message' => esc_html__('All done', 'overlap') ) );        
+                    echo json_encode( array('code' => '1', 'key' => $type, 'message' => esc_html__('All done', 'overlap') ) );        
 
                 } catch (Exception $e) {
-                    echo json_encode( array('code' => '2', 'message' => esc_html__('There has been an error.', 'overlap') .' '. $e ) );           
+                    echo json_encode( array('code' => '0', 'key' => $type, 'message' => esc_html__('There was an error.', 'overlap') .' '. $e ) );           
                 }
 
             }else{
@@ -75,7 +78,6 @@ if( !class_exists('Overlap_Ajax_Importer') ) {
             exit;
                
         }
-
 
         function default_settings( $demo = '1' ){
             
