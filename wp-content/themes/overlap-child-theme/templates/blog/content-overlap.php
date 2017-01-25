@@ -139,7 +139,7 @@
             <?php }?>
             <?php if( overlap_get_option('blog_meta_category') ){?>
             <span class="meta-category">
-                <strong><?php echo esc_html__('In', 'overlap');?></strong><?php echo overlap_get_multiple_categories(); ?>
+                <strong><?php echo esc_html__('In', 'overlap');?></strong><?php echo overlap_get_single_category(); ?>
             </span>  
             <?php }?>            
             <?php if ( overlap_get_option('blog_meta_comment') && ! post_password_required() && ( comments_open() || get_comments_number() ) ) : ?>
