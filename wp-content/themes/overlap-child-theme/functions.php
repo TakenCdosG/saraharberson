@@ -62,3 +62,25 @@ function overlap_get_blog_share_links( $links ){
 }
 add_filter( 'overlap_blog_share_links', 'overlap_get_blog_share_links' );
 */
+
+/* Get multiple categories names */
+function overlap_get_multiple_categories(){
+
+    $categories = get_the_category(); 
+
+    $category_names = array();
+    $string = array();
+    if($categories){
+	    foreach($categories as $category) {
+			array_push($category_names, $category->name);
+			echo '<a href="'. esc_url( get_category_link($category->term_id ) ) .'" title="'.  $category_names .'">'. esc_html( $category->name ) .'</a>';
+        }
+    }
+    return '';
+}
+/*Current Year Shortcode*/
+function year_shortcode() {
+  $year = date('Y');
+  return $year;
+}
+add_shortcode('year', 'year_shortcode');
